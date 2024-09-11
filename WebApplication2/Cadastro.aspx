@@ -7,19 +7,19 @@
             <asp:Label ID="IdLabel1" runat="server" Text='<%# Eval("Id") %>' />
             <br />
             Nome:
-            <asp:TextBox ID="NomeTextBox" runat="server" Text='<%# Bind("Nome") %>' />
+            <asp:TextBox ID="NomeTxtBox" runat="server" Text='<%# Bind("Nome") %>' />
             <br />
             Email:
-            <asp:TextBox ID="EmailTextBox" runat="server" Text='<%# Bind("Email") %>' />
+            <asp:TextBox ID="EmailTxtBox" runat="server" Text='<%# Bind("Email") %>' />
             <br />
             Senha:
-            <asp:TextBox ID="SenhaTextBox" runat="server" Text='<%# Bind("Senha") %>' />
+            <asp:TextBox ID="SenhaTxtBox" runat="server" Text='<%# Bind("Senha") %>' />
             <br />
             Telefone:
-            <asp:TextBox ID="TelefoneTextBox" runat="server" Text='<%# Bind("Telefone") %>' />
+            <asp:TextBox ID="TelefoneTxtBox" runat="server" Text='<%# Bind("Telefone") %>' />
             <br />
-            Endereco:
-            <asp:TextBox ID="EnderecoTextBox" runat="server" Text='<%# Bind("Endereco") %>' />
+            Data de Nascimento:
+            <asp:TextBox ID="DataNascimentoTxtBox" runat="server" Text='<%# Bind("Data_Nascimento") %>' />
             <br />
             <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Atualizar" />
             &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancelar" />
@@ -37,7 +37,7 @@
             Telefone:
             <asp:TextBox ID="TelefoneTextBox" runat="server" Text='<%# Bind("Telefone") %>' />
             <br />
-            Endereco:
+            Data de Nascimento:
             <asp:TextBox ID="EnderecoTextBox" runat="server" Text='<%# Bind("Endereco") %>' />
             <br />
             <br />
@@ -60,8 +60,8 @@
             Telefone:
             <asp:Label ID="TelefoneLabel" runat="server" Text='<%# Bind("Telefone") %>' />
             <br />
-            Endereco:
-            <asp:Label ID="EnderecoLabel" runat="server" Text='<%# Bind("Endereco") %>' />
+            Data de Nascimento:
+            <asp:Label ID="Data_NascimentoLabel" runat="server" Text='<%# Bind("Endereco") %>' />
             <br />
             <asp:LinkButton ID="EditButton" runat="server" CausesValidation="False" CommandName="Edit" Text="Editar" />
             &nbsp;<asp:LinkButton ID="DeleteButton" runat="server" CausesValidation="False" CommandName="Delete" Text="Excluir" />

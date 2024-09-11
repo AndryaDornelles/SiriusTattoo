@@ -13,5 +13,15 @@ namespace WebApplication2
         {
 
         }
+
+        protected void btnLogin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Cadastrar.aspx");
+        }
     }
 }
