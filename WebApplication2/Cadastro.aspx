@@ -42,7 +42,7 @@
             <br />
             <br />
             <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Inserir" BackColor="Black" BorderColor="Black" BorderStyle="Inset" Font-Underline="False" ForeColor="Yellow" />
-            &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancelar" BackColor="Black" BorderColor="Black" BorderStyle="Inset" Font-Underline="False" ForeColor="Yellow" />
+            &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancelar" BackColor="Black" BorderColor="Black" BorderStyle="Inset" Font-Underline="False" ForeColor="Yellow" OnClick="InsertCancelButton_Click" />
         </InsertItemTemplate>
         <ItemTemplate>
             Id:

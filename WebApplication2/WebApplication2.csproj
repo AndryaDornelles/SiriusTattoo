@@ -162,6 +162,7 @@
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="Login.aspx" />
     <Content Include="Cadastrar.aspx" />
+    <Content Include="Home.aspx" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
@@ -264,6 +265,13 @@
     </Compile>
     <Compile Include="Cadastrar.aspx.designer.cs">
       <DependentUpon>Cadastrar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

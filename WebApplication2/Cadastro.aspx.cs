@@ -18,5 +18,10 @@ namespace WebApplication1
         {
 
         }
+
+        protected void InsertCancelButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx");
+        }
     }
 }
