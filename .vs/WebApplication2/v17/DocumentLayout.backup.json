@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\andry\\source\\repos\\ProjetoConclusao\\WebApplication2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4BE6A708-344A-48BF-89B7-72DECEDD2ED2}|WebApplication2\\WebApplication2.csproj|c:\\users\\andry\\source\\repos\\projetoconclusao\\webapplication2\\webapplication2\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{4BE6A708-344A-48BF-89B7-72DECEDD2ED2}|WebApplication2\\WebApplication2.csproj|solutionrelative:webapplication2\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BE6A708-344A-48BF-89B7-72DECEDD2ED2}|WebApplication2\\WebApplication2.csproj|c:\\users\\andry\\source\\repos\\projetoconclusao\\webapplication2\\webapplication2\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{4BE6A708-344A-48BF-89B7-72DECEDD2ED2}|WebApplication2\\WebApplication2.csproj|solutionrelative:webapplication2\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.aspx",
+              "DocumentMoniker": "C:\\Users\\andry\\source\\repos\\ProjetoConclusao\\WebApplication2\\WebApplication2\\Login.aspx",
+              "RelativeDocumentMoniker": "WebApplication2\\Login.aspx",
+              "ToolTip": "C:\\Users\\andry\\source\\repos\\ProjetoConclusao\\WebApplication2\\WebApplication2\\Login.aspx",
+              "RelativeToolTip": "WebApplication2\\Login.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-09-11T03:58:02.731Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Site.Master",
+              "DocumentMoniker": "C:\\Users\\andry\\source\\repos\\ProjetoConclusao\\WebApplication2\\WebApplication2\\Site.Master",
+              "RelativeDocumentMoniker": "WebApplication2\\Site.Master",
+              "ToolTip": "C:\\Users\\andry\\source\\repos\\ProjetoConclusao\\WebApplication2\\WebApplication2\\Site.Master",
+              "RelativeToolTip": "WebApplication2\\Site.Master",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-09-11T03:57:22.076Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
