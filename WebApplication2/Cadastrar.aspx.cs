@@ -16,7 +16,12 @@ namespace WebApplication2
 
         protected void btnCadastrar_Click(object sender, EventArgs e)
         {
-
+            string nome = txtNome.Text;
+            string email = TxtEmail.Text;
+            string telefone = TxtTelefone.Text;
+            DateTime dataNascimento = Convert.ToDateTime(dtNascimento.Text);
+            string senha = txtSenha.Text;
+            string repetirSenha = TxtRepetirSenha.Text;
         }
 
         protected void btnVoltar_Click(object sender, EventArgs e)

@@ -42,13 +42,13 @@ namespace WebApplication2
         protected global::System.Web.UI.WebControls.TextBox TxtEmail;
 
         /// <summary>
-        /// Controle TextBox1.
+        /// Controle TxtTelefone.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox TxtTelefone;
 
         /// <summary>
         /// Controle dtNascimento.
@@ -69,13 +69,13 @@ namespace WebApplication2
         protected global::System.Web.UI.WebControls.TextBox txtSenha;
 
         /// <summary>
-        /// Controle TextRepetirSenha.
+        /// Controle TxtRepetirSenha.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextRepetirSenha;
+        protected global::System.Web.UI.WebControls.TextBox TxtRepetirSenha;
 
         /// <summary>
         /// Controle btnCadastrar.
