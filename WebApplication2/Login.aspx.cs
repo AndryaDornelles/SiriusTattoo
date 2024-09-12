@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -16,7 +17,33 @@ namespace WebApplication2
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtUsuario.Text))
+            {
+                txtUsuario.BorderColor = Color.Red;
+                lbResultaUsuario.Visible = true;
+                lbResultaUsuario.Text = "Informe um Email";
+                lbResultaUsuario.ForeColor = Color.Red;
+            }
+            else
+            {
+                txtUsuario.BorderColor = Color.Black;
+                lbResultaUsuario.Visible = false;
+            }
+            if (string.IsNullOrEmpty(txtSenha.Text))
+            {
+                txtSenha.BorderColor = Color.Red;
+                lbResultadoSenha.Visible = true;
+                lbResultadoSenha.Text = "Informe uma senha";
+                lbResultadoSenha.ForeColor = Color.Red;
+            }
+            else
+            {
+                txtSenha.BorderColor = Color.Black;
+                lbResultadoSenha.Visible = false;
+            }
 
+            // Consultar no banco de dados.
+            
         }
 
         protected void btnCadastrar_Click(object sender, EventArgs e)

@@ -3,12 +3,16 @@
 
     <formview ID="formLogin" runat="server">
         <div>
-            <h1>Login</h1>
-            <br />
+            <h1>Login</h1><br />
+
             <label>Usuário</label><br />
             <asp:TextBox ID="txtUsuario" runat="server"></asp:TextBox><br />
+            <asp:Label ID="lbResultaUsuario" runat="server" Visible="false"></asp:Label><br />
+
             <label>Senha</label><br />
             <asp:TextBox ID="txtSenha" runat="server" TextMode="Password"></asp:TextBox><br />
+            <asp:Label ID="lbResultadoSenha" runat="server" Visible="false"></asp:Label><br />
+            
             <asp:Button ID="btnLogin" runat="server" Text="Entrar" OnClick="btnLogin_Click" /><br />
             <asp:Button ID="btnCadastrar" runat="server" Text="Cadastre-se" OnClick="btnCadastrar_Click" /><br />
 
