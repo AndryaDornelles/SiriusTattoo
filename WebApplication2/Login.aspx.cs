@@ -43,7 +43,7 @@ namespace WebApplication2
             }
 
             // Consultar no banco de dados.
-            if (string.IsNullOrEmpty (txtSenha.Text) && !string.IsNullOrEmpty (txtSenha.Text))
+            if (!string.IsNullOrEmpty (txtSenha.Text) && !string.IsNullOrEmpty (txtSenha.Text))
             {
                 //Se o usuário e senha estiverem corretos, página vai pra home
                 Response.Redirect("Home.aspx");
