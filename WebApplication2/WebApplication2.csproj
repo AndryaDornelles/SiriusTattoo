@@ -114,10 +114,6 @@
     <Content Include="App_Data\SQLQueryOrcamentos.sql" />
     <Content Include="App_Data\SQLQueryTatuadores.sql" />
     <Content Include="App_Data\SQLQueryTatuagens.sql" />
-    <Content Include="App_Data\StudioTattoo.mdf" />
-    <Content Include="App_Data\StudioTattoo_log.ldf">
-      <DependentUpon>StudioTattoo.mdf</DependentUpon>
-    </Content>
     <Content Include="Cadastro.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
