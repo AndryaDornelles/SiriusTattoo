@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SiriusTattooModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Agenda">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Cliente_Id" Type="bigint" Nullable="false" />
+    <Property Name="Tatuador_Id" Type="bigint" Nullable="false" />
+    <Property Name="Data_Sessao" Type="datetimeoffset" Precision="7" Nullable="false" />
+    <Property Name="Duracao" Type="time" Precision="7" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Clientes">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="90" Nullable="false" />
+    <Property Name="Senha" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Telefone" Type="nvarchar" MaxLength="11" Nullable="false" />
+    <Property Name="Data_Nascimento" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Compras">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Cliente_Id" Type="bigint" Nullable="false" />
+    <Property Name="Tatuagem_Id" Type="bigint" Nullable="false" />
+    <Property Name="DataCompra" Type="datetimeoffset" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Tatuadores">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="nchar" MaxLength="90" Nullable="false" />
+    <Property Name="Senha" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Telefone" Type="nvarchar" MaxLength="11" Nullable="false" />
+    <Property Name="Especialidade" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tatuagens">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nome" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Descricao" Type="nvarchar(max)" />
+    <Property Name="Preco" Type="money" Nullable="false" />
+    <Property Name="Tatuador_Id" Type="bigint" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Agenda__Cliente___6D0D32F4">
+    <End Role="Clientes" Type="Self.Clientes" Multiplicity="1" />
+    <End Role="Agenda" Type="Self.Agenda" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clientes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Agenda">
+        <PropertyRef Name="Cliente_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Agenda__Tatuador__6E01572D">
+    <End Role="Tatuadores" Type="Self.Tatuadores" Multiplicity="1" />
+    <End Role="Agenda" Type="Self.Agenda" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tatuadores">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Agenda">
+        <PropertyRef Name="Tatuador_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Compras__Cliente__619B8048">
+    <End Role="Clientes" Type="Self.Clientes" Multiplicity="1" />
+    <End Role="Compras" Type="Self.Compras" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clientes">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Compras">
+        <PropertyRef Name="Cliente_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Compras__Tatuage__628FA481">
+    <End Role="Tatuagens" Type="Self.Tatuagens" Multiplicity="1" />
+    <End Role="Compras" Type="Self.Compras" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tatuagens">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Compras">
+        <PropertyRef Name="Tatuagem_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Tatuagens__Tatua__5DCAEF64">
+    <End Role="Tatuadores" Type="Self.Tatuadores" Multiplicity="1" />
+    <End Role="Tatuagens" Type="Self.Tatuagens" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tatuadores">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Tatuagens">
+        <PropertyRef Name="Tatuador_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SiriusTattooModelStoreContainer">
+    <EntitySet Name="Agenda" EntityType="Self.Agenda" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Clientes" EntityType="Self.Clientes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Compras" EntityType="Self.Compras" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tatuadores" EntityType="Self.Tatuadores" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tatuagens" EntityType="Self.Tatuagens" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Agenda__Cliente___6D0D32F4" Association="Self.FK__Agenda__Cliente___6D0D32F4">
+      <End Role="Clientes" EntitySet="Clientes" />
+      <End Role="Agenda" EntitySet="Agenda" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Agenda__Tatuador__6E01572D" Association="Self.FK__Agenda__Tatuador__6E01572D">
+      <End Role="Tatuadores" EntitySet="Tatuadores" />
+      <End Role="Agenda" EntitySet="Agenda" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Compras__Cliente__619B8048" Association="Self.FK__Compras__Cliente__619B8048">
+      <End Role="Clientes" EntitySet="Clientes" />
+      <End Role="Compras" EntitySet="Compras" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Compras__Tatuage__628FA481" Association="Self.FK__Compras__Tatuage__628FA481">
+      <End Role="Tatuagens" EntitySet="Tatuagens" />
+      <End Role="Compras" EntitySet="Compras" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Tatuagens__Tatua__5DCAEF64" Association="Self.FK__Tatuagens__Tatua__5DCAEF64">
+      <End Role="Tatuadores" EntitySet="Tatuadores" />
+      <End Role="Tatuagens" EntitySet="Tatuagens" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

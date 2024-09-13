@@ -17,6 +17,8 @@ namespace WebApplication2
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
+            #region | Validações |
+
             if (string.IsNullOrEmpty(txtUsuario.Text))
             {
                 txtUsuario.BorderColor = Color.Red;
@@ -41,14 +43,25 @@ namespace WebApplication2
                 txtSenha.BorderColor = Color.Black;
                 lbResultadoSenha.Visible = false;
             }
+            #endregion
 
-            // Consultar no banco de dados.
-            if (!string.IsNullOrEmpty (txtSenha.Text) && !string.IsNullOrEmpty (txtSenha.Text))
+            Clientes clientes = new Clientes();
+
+            using (SiriusTattooEntities ctx = new SiriusTattooEntities())
             {
-                //Se o usuário e senha estiverem corretos, página vai pra home
-                Response.Redirect("Home.aspx");
+                clientes = ctx.Clientes.Where(c => c.Email == txtUsuario.Text && c.Senha == txtSenha.Text).FirstOrDefault();
+
+                if (clientes != null)
+                {
+                    Response.Redirect("Home.aspx");
+                }
+                else
+                {
+                    lbResultado.Visible = true;
+                    lbResultado.Text = "Usuário ou senha inválidos";
+                }
             }
-            
+
         }
 
         protected void btnCadastrar_Click(object sender, EventArgs e)

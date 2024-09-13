@@ -13,6 +13,8 @@
             <asp:TextBox ID="txtSenha" runat="server" TextMode="Password"></asp:TextBox><br />
             <asp:Label ID="lbResultadoSenha" runat="server" Visible="false"></asp:Label><br />
             
+            <asp:Label ID="lbResultado" runat="server" Visible="false"></asp:Label><br />
+
             <asp:Button ID="btnLogin" runat="server" Text="Entrar" OnClick="btnLogin_Click" /><br />
             <asp:Button ID="btnCadastrar" runat="server" Text="Cadastre-se" OnClick="btnCadastrar_Click" /><br />
 

@@ -146,3 +146,7 @@ C:\Users\andry\source\repos\SiriusTattoo\WebApplication2\WebApplication2\obj\Deb
 C:\Users\andry\source\repos\SiriusTattoo\WebApplication2\WebApplication2\obj\Debug\WebAppli.0DB3FC1A.Up2Date
 C:\Users\andry\source\repos\SiriusTattoo\WebApplication2\WebApplication2\obj\Debug\WebApplication2.dll
 C:\Users\andry\source\repos\SiriusTattoo\WebApplication2\WebApplication2\obj\Debug\WebApplication2.pdb
+C:\Users\andry\source\repos\SiriusTattoo\WebApplication2\WebApplication2\bin\EntityFramework.dll
+C:\Users\andry\source\repos\SiriusTattoo\WebApplication2\WebApplication2\bin\EntityFramework.SqlServer.dll
+C:\Users\andry\source\repos\SiriusTattoo\WebApplication2\WebApplication2\bin\EntityFramework.xml
+C:\Users\andry\source\repos\SiriusTattoo\WebApplication2\WebApplication2\bin\EntityFramework.SqlServer.xml

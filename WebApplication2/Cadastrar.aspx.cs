@@ -17,12 +17,23 @@ namespace WebApplication2
 
         protected void btnCadastrar_Click(object sender, EventArgs e)
         {
+            #region | Validações |
+
+            // Define cores textBox antes das validações
+            lbResultado.Visible = false;
+            txtNome.BorderColor = Color.Black;
+            txtEmail.BorderColor = Color.Black;
+            txtTelefone.BorderColor = Color.Black;
+            txtSenha.BorderColor = Color.Black;
+            txtRepetirSenha.BorderColor = Color.Black;
+            dtNascimento.BorderColor = Color.Black;
+
             string nome = txtNome.Text;
             string email = txtEmail.Text;
             string telefone = txtTelefone.Text;
             string senha = txtSenha.Text;
             string repetirSenha = txtRepetirSenha.Text;
-
+            
             // Validando se é maior de idade.
             decimal idade = 0;
 
@@ -88,20 +99,26 @@ namespace WebApplication2
                 txtSenha.BorderColor = Color.Red;
                 txtRepetirSenha.BorderColor = Color.Red;
             }
+            #endregion
             else
             {
                 //Pesquisa no banco
-
                 // se estiver disponivel o email ele cadastra
 
-                lbResultado.Visible = false;
-                txtNome.BorderColor = Color.Black;
-                txtEmail.BorderColor = Color.Black;
-                txtTelefone.BorderColor = Color.Black;
-                txtSenha.BorderColor = Color.Black;
-                txtRepetirSenha.BorderColor = Color.Black;
-                dtNascimento.BorderColor = Color.Black;
+                Clientes clientes = new Clientes();
+                clientes.Nome = txtNome.Text;
+                clientes.Email = txtEmail.Text;
+                clientes.Telefone = txtTelefone.Text;
+                clientes.Data_Nascimento = Convert.ToDateTime(dtNascimento.Text);
+                clientes.Senha = txtSenha.Text;
 
+                using (SiriusTattooEntities ctx = new SiriusTattooEntities())
+                {
+                    ctx.Clientes.Add(clientes);
+                    ctx.SaveChanges();
+                }
+                // Depois de cadastrado retorna para o login
+                Response.Redirect("Login.aspx");
             }
         }
 
