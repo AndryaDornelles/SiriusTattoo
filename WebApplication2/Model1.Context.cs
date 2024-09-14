@@ -31,5 +31,6 @@ namespace WebApplication2
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Tatuadores> Tatuadores { get; set; }
         public virtual DbSet<Tatuagens> Tatuagens { get; set; }
+    
     }
 }

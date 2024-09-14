@@ -11,7 +11,8 @@ namespace WebApplication2
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Linq;
+
     public partial class Clientes
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -32,5 +33,23 @@ namespace WebApplication2
         public virtual ICollection<Agenda> Agenda { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Compras> Compras { get; set; }
+
+        
+        public Clientes consultarCLientesPorEmail(string email)
+        {
+            using (SiriusTattooEntities ctx = new SiriusTattooEntities())
+            {
+                return ctx.Clientes.Where(c => c.Email == email).FirstOrDefault();
+            }
+        }
+        public void cadastrarClientes(Clientes clientesCad)
+        {
+            using (SiriusTattooEntities ctx = new SiriusTattooEntities())
+            {
+                ctx.Clientes.Add(clientesCad);
+                ctx.SaveChanges();
+            }
+        }
+
     }
 }

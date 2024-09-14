@@ -112,19 +112,29 @@ namespace WebApplication2
                     clientes.Data_Nascimento = Convert.ToDateTime(dtNascimento.Text);
                     clientes.Senha = txtSenha.Text;
 
-                    using (SiriusTattooEntities ctx = new SiriusTattooEntities())
+                    Clientes objValidador = new Clientes();
+                    Clientes clientesDal = new Clientes();
+
+                    objValidador = clientesDal.consultarCLientesPorEmail(txtEmail.Text);
+
+                    if (objValidador != null)
                     {
-                        ctx.Clientes.Add(clientes);
-                        ctx.SaveChanges();
+                        lbResultado.Visible = true;
+                        lbResultado.Text = "Email já cadastrado.";
                     }
+                    else
+                    {
+                        clientes.cadastrarClientes(clientes);
+                     // Depois de cadastrado retorna para o login
+                        Response.Redirect("Login.aspx");
+                    }
+                    //verifica se email já existe no banco de dados
                 }
-                catch (Exception ex) 
+                catch (Exception ex)
                 {
-                    lbResultado.Text = ex.Message; 
+                    lbResultado.Text = ex.Message;
                     lbResultado.Visible = true;
                 }
-                // Depois de cadastrado retorna para o login
-                Response.Redirect("Login.aspx");
             }
         }
 
