@@ -61,6 +61,7 @@
     <Property Name="Descricao" Type="nvarchar(max)" />
     <Property Name="Preco" Type="money" Nullable="false" />
     <Property Name="Tatuador_Id" Type="bigint" Nullable="false" />
+    <Property Name="Imagem" Type="varchar" MaxLength="300" />
   </EntityType>
   <Association Name="FK__Agenda__Cliente___6D0D32F4">
     <End Role="Clientes" Type="Self.Clientes" Multiplicity="1" />

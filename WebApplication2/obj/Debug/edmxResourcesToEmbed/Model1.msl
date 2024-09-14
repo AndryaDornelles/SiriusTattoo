@@ -61,6 +61,7 @@
     <EntitySetMapping Name="Tatuagens">
       <EntityTypeMapping TypeName="SiriusTattooModel.Tatuagens">
         <MappingFragment StoreEntitySet="Tatuagens">
+          <ScalarProperty Name="Imagem" ColumnName="Imagem" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Nome" ColumnName="Nome" />
           <ScalarProperty Name="Descricao" ColumnName="Descricao" />

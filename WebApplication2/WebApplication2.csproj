@@ -177,6 +177,7 @@
     <Content Include="Login.aspx" />
     <Content Include="Cadastrar.aspx" />
     <Content Include="Home.aspx" />
+    <Content Include="Disponiveis.aspx" />
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
@@ -326,6 +327,13 @@
     </Compile>
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Disponiveis.aspx.cs">
+      <DependentUpon>Disponiveis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Disponiveis.aspx.designer.cs">
+      <DependentUpon>Disponiveis.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

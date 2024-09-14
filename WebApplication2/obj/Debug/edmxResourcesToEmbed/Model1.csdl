@@ -71,6 +71,7 @@
     <Property Name="Tatuador_Id" Type="Int64" Nullable="false" />
     <NavigationProperty Name="Compras" Relationship="Self.FK__Compras__Tatuage__628FA481" FromRole="Tatuagens" ToRole="Compras" />
     <NavigationProperty Name="Tatuadores" Relationship="Self.FK__Tatuagens__Tatua__5DCAEF64" FromRole="Tatuagens" ToRole="Tatuadores" />
+    <Property Name="Imagem" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
   </EntityType>
   <Association Name="FK__Agenda__Cliente___6D0D32F4">
     <End Role="Clientes" Type="Self.Clientes" Multiplicity="1" />

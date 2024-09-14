@@ -25,6 +25,7 @@ namespace WebApplication2
         public string Descricao { get; set; }
         public decimal Preco { get; set; }
         public long Tatuador_Id { get; set; }
+        public string Imagem { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Compras> Compras { get; set; }
