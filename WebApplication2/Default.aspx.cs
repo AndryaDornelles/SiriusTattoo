@@ -11,7 +11,11 @@ namespace WebApplication2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            if (Session["UserEmail"] == null)
+            {
+                // Usuário não está logado, redirecionar para a página de login
+                Response.Redirect("Login.aspx");
+            }
         }
     }
 }

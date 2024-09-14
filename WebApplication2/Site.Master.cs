@@ -11,7 +11,17 @@ namespace WebApplication2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
+        }
+
+        protected void btnLogout_Click(object sender, EventArgs e)
+        {
             
+            // Limpar sessão
+            Session.Clear();
+            // Redirecionar para a página de login
+            Response.Redirect("Login.aspx");
+           
         }
     }
 }
