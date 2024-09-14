@@ -66,17 +66,51 @@ namespace WebApplication2
                 lbResultado.ForeColor = Color.Red;
                 txtTatuador.BorderColor = Color.Red;
             }
-            else if (string.IsNullOrEmpty(imagem))
-            {
-                lbResultado.Text = "Adicione uma imagem";
-                lbResultado.Visible = true;
-                lbResultado.ForeColor = Color.Red;
-                fupImagemTatuagem.BorderColor = Color.Red;
-            }
             #endregion
+            else
+            {
+                //Pesquisa no banco
+                try
+                {
+                    // Verifica se foi inserida uma imagem
+                    if (fupImagemTatuagem.HasFile)
+                    {
+                        //cria uma string para imagem e mapeia o caminho
+                        string caminhoImagem = Server.MapPath("/imagemTatuagem/");
+                        string nomeImagem = fupImagemTatuagem.FileName;
 
+                        fupImagemTatuagem.SaveAs(caminhoImagem + nomeImagem);
 
+                        Tatuagens tatuagens = new Tatuagens();
+                        tatuagens.Nome = txtNomeTatuagem.Text;
+                        tatuagens.Descricao = txtDescricaoTatuagem.Text;
+                        tatuagens.Preco = Convert.ToDecimal(txtPreco.Text);
+                        tatuagens.Tatuador_Id = Convert.ToInt64(txtTatuador.Text);
+                        tatuagens.Imagem = fupImagemTatuagem.FileName;
 
+                        using (SiriusTattooEntities ctx = new SiriusTattooEntities())
+                        {
+                            ctx.Tatuagens.Add(tatuagens);
+                            ctx.SaveChanges();
+                            GridView1.DataBind();
+                        }
+                        panelCadastroTatuagem.Visible = false;
+                    }
+                    else
+                    {
+                        lbResultado.Text = "Adicione uma imagem";
+                        lbResultado.Visible = true;
+                        lbResultado.ForeColor = Color.Red;
+                        fupImagemTatuagem.BorderColor = Color.Red;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    lbResultado.Text = ex.Message;
+                    lbResultado.Visible = true;
+                }
+            }
+            
         }
 
         protected void btnCancelarAddTatuagem_Click(object sender, EventArgs e)

@@ -46,12 +46,15 @@ namespace WebApplication2
             #endregion
 
             Clientes clientes = new Clientes();
+            Tatuadores tatuadores = new Tatuadores();  
 
             using (SiriusTattooEntities ctx = new SiriusTattooEntities())
             {
+                
                 clientes = ctx.Clientes.Where(c => c.Email == txtUsuario.Text && c.Senha == txtSenha.Text).FirstOrDefault();
+                tatuadores = ctx.Tatuadores.Where(t => t.Email == txtUsuario.Text && t.Senha == txtSenha.Text).FirstOrDefault();
 
-                if (clientes != null)
+                if ((clientes != null) || (tatuadores != null))
                 {
                     Response.Redirect("Home.aspx");
                 }
@@ -61,7 +64,6 @@ namespace WebApplication2
                     lbResultado.Text = "Usuário ou senha inválidos";
                 }
             }
-
         }
 
         protected void btnCadastrar_Click(object sender, EventArgs e)

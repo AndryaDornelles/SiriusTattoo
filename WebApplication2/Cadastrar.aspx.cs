@@ -103,18 +103,25 @@ namespace WebApplication2
             {
                 //Pesquisa no banco
                 // se estiver disponivel o email ele cadastra
-
-                Clientes clientes = new Clientes();
-                clientes.Nome = txtNome.Text;
-                clientes.Email = txtEmail.Text;
-                clientes.Telefone = txtTelefone.Text;
-                clientes.Data_Nascimento = Convert.ToDateTime(dtNascimento.Text);
-                clientes.Senha = txtSenha.Text;
-
-                using (SiriusTattooEntities ctx = new SiriusTattooEntities())
+                try
                 {
-                    ctx.Clientes.Add(clientes);
-                    ctx.SaveChanges();
+                    Clientes clientes = new Clientes();
+                    clientes.Nome = txtNome.Text;
+                    clientes.Email = txtEmail.Text;
+                    clientes.Telefone = txtTelefone.Text;
+                    clientes.Data_Nascimento = Convert.ToDateTime(dtNascimento.Text);
+                    clientes.Senha = txtSenha.Text;
+
+                    using (SiriusTattooEntities ctx = new SiriusTattooEntities())
+                    {
+                        ctx.Clientes.Add(clientes);
+                        ctx.SaveChanges();
+                    }
+                }
+                catch (Exception ex) 
+                {
+                    lbResultado.Text = ex.Message; 
+                    lbResultado.Visible = true;
                 }
                 // Depois de cadastrado retorna para o login
                 Response.Redirect("Login.aspx");
