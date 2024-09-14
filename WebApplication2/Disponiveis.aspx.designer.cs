@@ -105,15 +105,6 @@ namespace WebApplication2
         protected global::System.Web.UI.WebControls.Label lbResultado;
 
         /// <summary>
-        /// Controle btnAddTatuagem.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAddTatuagem;
-
-        /// <summary>
         /// Controle btnCancelarAddTatuagem.
         /// </summary>
         /// <remarks>
@@ -121,5 +112,14 @@ namespace WebApplication2
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCancelarAddTatuagem;
+
+        /// <summary>
+        /// Controle btnAddTatuagem.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAddTatuagem;
     }
 }

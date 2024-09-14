@@ -27,8 +27,8 @@
             <asp:FileUpload ID="fupImagemTatuagem" runat="server" /><br />
             <asp:Label ID="lbResultado" runat="server" Visible="false"></asp:Label><br />
 
-            <asp:Button ID="btnAddTatuagem" runat="server" Text="Adicionar" OnClick="btnAddTatuagem_Click" />
             <asp:Button ID="btnCancelarAddTatuagem" runat="server" Text="Cancelar" OnClick="btnCancelarAddTatuagem_Click" />
+            <asp:Button ID="btnAddTatuagem" runat="server" Text="Adicionar" OnClick="btnAddTatuagem_Click" />
 
 
         </div>

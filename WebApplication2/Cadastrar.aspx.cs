@@ -55,7 +55,6 @@ namespace WebApplication2
                 lbResultado.ForeColor = Color.Red;
                 dtNascimento.BorderColor = Color.Red;
             }
-
             else if (idade < 18)
             {
                 lbResultado.Text = "Não permitido para menores de 18 anos";
