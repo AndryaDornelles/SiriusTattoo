@@ -16,7 +16,6 @@
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
-<%--Script Javascript que pergunta se usuário deseja deslogar--%>
     <script type="text/javascript">
     function confirmeLogout() {
         return confirm('Você tem certeza de que deseja sair?');

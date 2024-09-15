@@ -6,12 +6,20 @@
 <ControlStyle Height="500px"></ControlStyle>
         </asp:ImageField>
         <asp:BoundField DataField="Id" Visible="false" HeaderText="Id" SortExpression="Id" InsertVisible="False" ReadOnly="True" />
-        <asp:BoundField DataField="Nome" HeaderText="Nome" SortExpression="Nome" />
-        <asp:BoundField DataField="Descricao" HeaderText="Descricao" SortExpression="Descricao" />
+        <asp:BoundField DataField="Nome" Visible="false" HeaderText="Nome" SortExpression="Nome" />
+        <asp:BoundField DataField="Descricao" Visible="false" HeaderText="Descricao" SortExpression="Descricao" />
         <asp:BoundField DataField="Preco" HeaderText="Preco" SortExpression="Preco" />
         <asp:BoundField DataField="Tatuador_Id" visible="false" HeaderText="Tatuador_Id" SortExpression="Tatuador_Id" />
-        <asp:BoundField DataField="Imagem" HeaderText="Imagem" SortExpression="Imagem" />
+        <asp:BoundField DataField="Imagem" Visible="false" HeaderText="Imagem" SortExpression="Imagem" />
+        
+        <asp:TemplateField>
+            <ItemTemplate>
+                <asp:Button ID="btnComprar" runat="server" CommandArgument='<%# Eval("Id") %>' CommandName="Agendar" OnClick="btnComprar_Click" Text="Agendar Sessão" />
+            </ItemTemplate>
+        </asp:TemplateField>
+
     </Columns>
+
         <HeaderStyle HorizontalAlign="Center" Wrap="True" />
     </asp:GridView>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:SiriusTattooConnectionString2 %>" SelectCommand="SELECT '~/imagemTatuagem/' + Imagem as caminhoImagem, * FROM [Tatuagens]"></asp:SqlDataSource>

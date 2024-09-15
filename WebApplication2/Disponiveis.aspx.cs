@@ -145,5 +145,10 @@ namespace WebApplication2
         {
             panelCadastroTatuagem.Visible = false;
         }
+
+        protected void btnComprar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AgendarSessao.aspx");
+        }
     }
 }
