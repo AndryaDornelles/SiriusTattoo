@@ -11,7 +11,17 @@ namespace WebApplication2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            // Verifica se o usuário está logado
+            if (Session["UserEmail"] != null)
+            {
+                // Se usuário logado, exiba o botão para logout
+                btnLogout.Visible = true;
+            }
+            else
+            {
+                // Nenhum usuário logado, esconda o botão
+                btnLogout.Visible = false;
+            }
         }
 
         protected void btnLogout_Click(object sender, EventArgs e)

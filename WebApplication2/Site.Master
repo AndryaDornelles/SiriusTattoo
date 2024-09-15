@@ -51,7 +51,7 @@
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Login">Login</a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Disponiveis">Tatuagens Disponíveis</a></li>
                     </ul>
-                    <asp:LinkButton ID="btnLogout" runat="server" OnClick="btnLogout_Click">Logout</asp:LinkButton>
+                    <asp:LinkButton ID="btnLogout" runat="server" visible="false" OnClick="btnLogout_Click" ForeColor="#0dcaf0">Logout</asp:LinkButton>
                 </div>
             </div>
         </nav>
@@ -61,7 +61,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Sírius Tattoo - Desenvolvido por <a href="https://github.com/AndryaDornelles">Andrya Dornelles</a> </p>
+                <p>&copy; <%: DateTime.Now.Year %> - Sírius Tattoo - Desenvolvido por <a href="https://github.com/AndryaDornelles" style="color:#0dcaf0">Andrya Dornelles</a> </p>
             </footer>
         </div>
     </form>
