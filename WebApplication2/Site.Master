@@ -4,7 +4,7 @@
 
 <html lang="pt">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%: Page.Title %> - Sírius Tattoo</title>
@@ -15,6 +15,13 @@
 
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+<%--Script Javascript que pergunta se usuário deseja deslogar--%>
+    <script type="text/javascript">
+    function confirmeLogout() {
+        return confirm('Você tem certeza de que deseja sair?');
+    }
+    </script>
 
 </head>
 <body>
@@ -51,7 +58,7 @@
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Login">Login</a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Disponiveis">Tatuagens Disponíveis</a></li>
                     </ul>
-                    <asp:LinkButton ID="btnLogout" runat="server" visible="false" OnClick="btnLogout_Click" ForeColor="#0dcaf0">Logout</asp:LinkButton>
+                    <asp:LinkButton ID="btnLogout" runat="server" visible="false" OnClick="btnLogout_Click" OnClientClick="return confirmeLogout()" ForeColor="#0dcaf0">Logout</asp:LinkButton>
                 </div>
             </div>
         </nav>
