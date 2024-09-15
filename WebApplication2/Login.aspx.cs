@@ -104,7 +104,6 @@ namespace WebApplication2
                 return clientes != null || tatuadores == null;
             }
         }
-
         private string HashPassword(string password) 
         {
             // SHA-256 é uma função de hash criptográfico que gera um valor de 256 bits (32 bytes) a partir da entrada.
@@ -113,11 +112,6 @@ namespace WebApplication2
                 var bytes = sha256.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
                 return BitConverter.ToString(bytes).Replace("-", "").ToLower();
             }
-        }
-
-        protected void btnCadastrar_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("Cadastrar.aspx");
         }
     }
 }
