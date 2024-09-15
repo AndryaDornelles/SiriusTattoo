@@ -12,10 +12,34 @@ namespace WebApplication2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["UserEmail"] == null)
+            // Verifica se o usuário está logado
+            if (Session["UserEmail"] != null)
             {
-                // Usuário não está logado, redirecionar para a página de login
-                Response.Redirect("Login.aspx");
+                
+                string userEmail = Session["UserEmail"].ToString();
+
+                // Conectar ao banco de dados e verificar o tipo de usuário
+                using (SiriusTattooEntities ctx = new SiriusTattooEntities())
+                {
+                    var tatuador = ctx.Tatuadores.FirstOrDefault(t => t.Email == userEmail);
+
+                    if (tatuador != null)
+                    {
+                        // Tatuador consegue visualizar o botão
+                        btnCadastrarTatuagem.Visible = true;
+                    }
+                    else
+                    {
+                        // O usuário não é um tatuador, esconde o botão.
+                        btnAddTatuagem.Visible = false;
+                    }
+                    
+                }
+            }
+            else
+            {
+                // Nenhum usuário logado, esconda o botão
+                btnAddTatuagem.Visible = false;
             }
         }
 
@@ -28,7 +52,7 @@ namespace WebApplication2
         {
             #region | Validações |
 
-            // Define as cores textBos antes das validações
+            // Define as cores textBox antes das validações
             lbResultado.Visible = false;
             txtNomeTatuagem.BorderColor = Color.Black;
             txtDescricaoTatuagem.BorderColor = Color.Black;

@@ -16,7 +16,7 @@
     </asp:GridView>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:SiriusTattooConnectionString2 %>" SelectCommand="SELECT '~/imagemTatuagem/' + Imagem as caminhoImagem, * FROM [Tatuagens]"></asp:SqlDataSource>
     <br />
-    <asp:Button ID="btnCadastrarTatuagem" runat="server" Text="Cadastrar Nova Tatuagem" OnClick="btnCadastrarTatuagem_Click" Width="237px" /><br />
+    <asp:Button ID="btnCadastrarTatuagem" runat="server" Text="Cadastrar Nova Tatuagem" Visible="false" OnClick="btnCadastrarTatuagem_Click" Width="237px" /><br />
 
     <asp:Panel ID="panelCadastroTatuagem" runat="server" Visible="false">
         <div>
