@@ -148,7 +148,9 @@ namespace WebApplication2
 
         protected void btnComprar_Click(object sender, EventArgs e)
         {
-            Response.Redirect("AgendarSessao.aspx");
+            // Obter o ID da tatuagem a partir do CommandArgument
+            long tatuagemId = Convert.ToInt64(((Button)sender).CommandArgument);
+            Response.Redirect("Compras.aspx?tatuagemId=" + tatuagemId);
         }
     }
 }
