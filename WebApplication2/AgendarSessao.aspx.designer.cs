@@ -11,7 +11,7 @@ namespace WebApplication2
 {
 
 
-    public partial class WebForm6
+    public partial class WebForm7
     {
     }
 }

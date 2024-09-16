@@ -179,6 +179,7 @@
     <Content Include="Home.aspx" />
     <Content Include="Disponiveis.aspx" />
     <Content Include="CadastrarTatuadores.aspx" />
+    <Content Include="Compras.aspx" />
     <Content Include="AgendarSessao.aspx" />
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -336,6 +337,13 @@
     </Compile>
     <Compile Include="CadastrarTatuadores.aspx.designer.cs">
       <DependentUpon>CadastrarTatuadores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Compras.aspx.cs">
+      <DependentUpon>Compras.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Compras.aspx.designer.cs">
+      <DependentUpon>Compras.aspx</DependentUpon>
     </Compile>
     <Compile Include="AgendarSessao.aspx.cs">
       <DependentUpon>AgendarSessao.aspx</DependentUpon>
