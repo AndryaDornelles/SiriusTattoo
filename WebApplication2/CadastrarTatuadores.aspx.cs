@@ -15,7 +15,6 @@ namespace WebApplication2
             // Verifica se o usuário está logado
             if (Session["UserEmail"] != null)
             {
-
                 string userEmail = Session["UserEmail"].ToString();
 
                 // Conectar ao banco de dados e verificar o tipo de usuário
@@ -32,7 +31,6 @@ namespace WebApplication2
                         // O usuário não é um tatuador, esconde o botão.
                         Response.Redirect("Login.aspx");
                     }
-
                 }
             }
             else
@@ -41,8 +39,7 @@ namespace WebApplication2
                 Response.Redirect("Login.aspx");
             }
         }
-
-        private bool ValidateInputs()
+        private bool ValidateInputs() 
         {
             bool isValid = true;
 

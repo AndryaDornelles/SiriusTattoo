@@ -1,0 +1,119 @@
+USE [SiriusTattoo]
+GO
+/****** Object:  Table [dbo].[Agenda]    Script Date: 17/09/2024 00:38:26 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Agenda](
+	[Id] [bigint] IDENTITY(1,1) NOT NULL,
+	[Cliente_Id] [bigint] NOT NULL,
+	[Tatuador_Id] [bigint] NOT NULL,
+	[Data_Sessao] [datetimeoffset](7) NOT NULL,
+	[Duracao] [time](7) NULL,
+	[Status] [nvarchar](50) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Clientes]    Script Date: 17/09/2024 00:38:26 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Clientes](
+	[Id] [bigint] IDENTITY(1,1) NOT NULL,
+	[Nome] [nvarchar](255) NOT NULL,
+	[Email] [nvarchar](90) NOT NULL,
+	[Senha] [nvarchar](20) NOT NULL,
+	[Telefone] [nvarchar](11) NOT NULL,
+	[Data_Nascimento] [date] NOT NULL,
+ CONSTRAINT [PK__tmp_ms_x__3214EC07AF2694D6] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY],
+ CONSTRAINT [UQ__tmp_ms_x__A9D105349DF08349] UNIQUE NONCLUSTERED 
+(
+	[Email] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Compras]    Script Date: 17/09/2024 00:38:26 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Compras](
+	[Id] [bigint] IDENTITY(1,1) NOT NULL,
+	[Cliente_Id] [bigint] NOT NULL,
+	[Tatuagem_Id] [bigint] NOT NULL,
+	[DataCompra] [datetimeoffset](7) NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Tatuadores]    Script Date: 17/09/2024 00:38:26 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Tatuadores](
+	[Id] [bigint] IDENTITY(1,1) NOT NULL,
+	[Nome] [nvarchar](50) NOT NULL,
+	[Email] [nchar](90) NOT NULL,
+	[Senha] [nchar](10) NOT NULL,
+	[Telefone] [nvarchar](11) NOT NULL,
+	[Especialidade] [nvarchar](50) NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY],
+UNIQUE NONCLUSTERED 
+(
+	[Email] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Tatuagens]    Script Date: 17/09/2024 00:38:26 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Tatuagens](
+	[Id] [bigint] IDENTITY(1,1) NOT NULL,
+	[Nome] [nvarchar](255) NOT NULL,
+	[Descricao] [nvarchar](max) NULL,
+	[Preco] [money] NOT NULL,
+	[Tatuador_Id] [bigint] NOT NULL,
+	[Imagem] [varchar](300) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[Compras] ADD  DEFAULT (sysdatetimeoffset()) FOR [DataCompra]
+GO
+ALTER TABLE [dbo].[Agenda]  WITH CHECK ADD  CONSTRAINT [FK__Agenda__Cliente___6D0D32F4] FOREIGN KEY([Cliente_Id])
+REFERENCES [dbo].[Clientes] ([Id])
+GO
+ALTER TABLE [dbo].[Agenda] CHECK CONSTRAINT [FK__Agenda__Cliente___6D0D32F4]
+GO
+ALTER TABLE [dbo].[Agenda]  WITH CHECK ADD FOREIGN KEY([Tatuador_Id])
+REFERENCES [dbo].[Tatuadores] ([Id])
+GO
+ALTER TABLE [dbo].[Compras]  WITH CHECK ADD  CONSTRAINT [FK__Compras__Cliente__619B8048] FOREIGN KEY([Cliente_Id])
+REFERENCES [dbo].[Clientes] ([Id])
+GO
+ALTER TABLE [dbo].[Compras] CHECK CONSTRAINT [FK__Compras__Cliente__619B8048]
+GO
+ALTER TABLE [dbo].[Compras]  WITH CHECK ADD FOREIGN KEY([Tatuagem_Id])
+REFERENCES [dbo].[Tatuagens] ([Id])
+GO
+ALTER TABLE [dbo].[Tatuagens]  WITH CHECK ADD FOREIGN KEY([Tatuador_Id])
+REFERENCES [dbo].[Tatuadores] ([Id])
+GO

@@ -8,7 +8,7 @@
         <asp:BoundField DataField="Id" Visible="false" HeaderText="Id" SortExpression="Id" InsertVisible="False" ReadOnly="True" />
         <asp:BoundField DataField="Nome" Visible="false" HeaderText="Nome" SortExpression="Nome" />
         <asp:BoundField DataField="Descricao" Visible="false" HeaderText="Descricao" SortExpression="Descricao" />
-        <asp:BoundField DataField="Preco" HeaderText="Preco" SortExpression="Preco" />
+        <asp:BoundField DataField="Preco" HeaderText="Preco" SortExpression="Preco" DataFormatString="{0:C}" />
         <asp:BoundField DataField="Tatuador_Id" visible="false" HeaderText="Tatuador_Id" SortExpression="Tatuador_Id" />
         <asp:BoundField DataField="Imagem" Visible="false" HeaderText="Imagem" SortExpression="Imagem" />
         
