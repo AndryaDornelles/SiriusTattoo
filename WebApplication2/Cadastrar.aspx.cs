@@ -12,7 +12,7 @@ namespace WebApplication2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         protected void btnCadastrar_Click(object sender, EventArgs e)
@@ -102,6 +102,7 @@ namespace WebApplication2
             else
             {
                 //Pesquisa no banco
+                // verifica se email já existe no banco de dados
                 // se estiver disponivel o email ele cadastra
                 try
                 {
@@ -113,9 +114,8 @@ namespace WebApplication2
                     clientes.Senha = txtSenha.Text;
 
                     Clientes objValidador = new Clientes();
-                    Clientes clientesDal = new Clientes();
-
-                    objValidador = clientesDal.consultarCLientesPorEmail(txtEmail.Text);
+                    
+                    objValidador = objValidador.consultarClientesPorEmail(txtEmail.Text);
 
                     if (objValidador != null)
                     {
@@ -128,11 +128,10 @@ namespace WebApplication2
                      // Depois de cadastrado retorna para o login
                         Response.Redirect("Login.aspx");
                     }
-                    //verifica se email já existe no banco de dados
                 }
                 catch (Exception ex)
                 {
-                    lbResultado.Text = ex.Message;
+                    lbResultado.Text = "Erro: " + ex.Message;
                     lbResultado.Visible = true;
                 }
             }

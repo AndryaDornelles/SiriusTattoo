@@ -35,7 +35,7 @@ namespace WebApplication2
         public virtual ICollection<Compras> Compras { get; set; }
 
         
-        public Clientes consultarCLientesPorEmail(string email)
+        public Clientes consultarClientesPorEmail(string email)
         {
             using (SiriusTattooEntities ctx = new SiriusTattooEntities())
             {

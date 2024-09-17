@@ -11,7 +11,8 @@ namespace WebApplication2
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Linq;
+
     public partial class Tatuadores
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -32,5 +33,22 @@ namespace WebApplication2
         public virtual ICollection<Agenda> Agenda { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Tatuagens> Tatuagens { get; set; }
+
+        public void cadastrarTatuadores(Tatuadores tatuador)
+        {
+            using (SiriusTattooEntities ctx = new SiriusTattooEntities())
+            {
+                ctx.Tatuadores.Add(tatuador);
+                ctx.SaveChanges();
+            }
+        }
+        public Tatuadores consultarTatuadoresPorEmail(string email)
+        {
+            using (SiriusTattooEntities ctx = new SiriusTattooEntities())
+            {
+                return ctx.Tatuadores.FirstOrDefault(t => t.Email == email);
+            }
+        }
+ 
     }
 }
