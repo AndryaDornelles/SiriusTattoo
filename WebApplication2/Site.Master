@@ -14,10 +14,10 @@
     </asp:PlaceHolder>
 
     <webopt:bundlereference runat="server" path="~/Content/css" />
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="~/favicon.png" rel="shortcut icon" type="image/x-icon" />
 
     <script type="text/javascript">
-    function confirmeLogout() {
+    function confirmeSair() {
         return confirm('Você tem certeza de que deseja sair?');
     }
     </script>
@@ -46,7 +46,9 @@
 
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" runat="server" href="~/">Sírius Tattoo</a>
+                <a class="navbar-brand" runat="server" href="~/">
+                    <img src="favicon.png" alt="Sírius Tattoo" style="height: 40px;" /> Sírius Tattoo
+                </a>
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Alternar a navegação" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -57,7 +59,7 @@
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Login">Login</a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Disponiveis">Tatuagens Disponíveis</a></li>
                     </ul>
-                    <asp:LinkButton ID="btnLogout" runat="server" visible="false" OnClick="btnLogout_Click" OnClientClick="return confirmeLogout()" ForeColor="#0dcaf0">Logout</asp:LinkButton>
+                    <asp:LinkButton ID="btnLogout" runat="server" visible="false" OnClick="btnLogout_Click" OnClientClick="return confirmeSair()" ForeColor="#0dcaf0">Logout</asp:LinkButton>
                 </div>
             </div>
         </nav>
@@ -67,7 +69,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Sírius Tattoo - Desenvolvido por <a href="https://github.com/AndryaDornelles" style="color:#0dcaf0">Andrya Dornelles</a> </p>
+                <p>&copy; <%: DateTime.Now.Year %> - Sírius Tattoo - Desenvolvido por <a href="https://github.com/AndryaDornelles" style="color:#0dcaf0" target="_blank" rel="noopener noreferrer">Andrya Dornelles</a> </p>
             </footer>
         </div>
     </form>

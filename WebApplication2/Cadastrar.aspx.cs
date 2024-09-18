@@ -125,8 +125,10 @@ namespace WebApplication2
                     else
                     {
                         clientes.cadastrarClientes(clientes);
-                     // Depois de cadastrado retorna para o login
-                        Response.Redirect("Login.aspx");
+
+                        // Exibe alerta de sucesso e redireciona após o alerta ser fechado
+                        string script = "alert('Cadastro efetuado com sucesso!'); window.location.href='Login.aspx';";
+                        ClientScript.RegisterStartupScript(this.GetType(), "alert", script, true);
                     }
                 }
                 catch (Exception ex)

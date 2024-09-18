@@ -18,7 +18,7 @@
              <asp:TextBox ID="txtRepetirSenha" runat="server" TextMode="Password"></asp:TextBox><br />
              <asp:Label ID="lbResultado" runat="server" Visible="false"></asp:Label><br />
 
-             <asp:Button ID="btnVoltar" runat="server" Text="Voltar" OnClick="btnVoltar_Click" />
+             <asp:Button ID="btnVoltar" runat="server" Text="Voltar" OnClick="btnVoltar_Click" OnClientClick="return confirmeSair()" />
              <asp:Button ID="btnCadastrar" runat="server" Text="Cadastrar" OnClick="btnCadastrar_Click" />
 
 

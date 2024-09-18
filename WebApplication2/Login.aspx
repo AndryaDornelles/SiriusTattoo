@@ -5,14 +5,14 @@
             <h1>Login</h1><br />
 
             <label>Usuário</label><br />
-            <asp:TextBox ID="txtUsuario" placeholder="Digite seu email" runat="server"></asp:TextBox><br />
-            <asp:Label ID="lbResultaUsuario" runat="server" Visible="false"></asp:Label><br />
+            <asp:TextBox ID="txtUsuario" placeholder="Digite seu email" runat="server" CssClass="form-control"></asp:TextBox><br />
+            <asp:Label ID="lbResultaUsuario" runat="server" Visible="false"></asp:Label>
 
             <label>Senha</label><br />
-            <asp:TextBox ID="txtSenha" runat="server" TextMode="Password"></asp:TextBox><br />
+            <asp:TextBox ID="txtSenha" runat="server" TextMode="Password" CssClass="form-control"></asp:TextBox><br />
             <asp:Label ID="lbResultadoSenha" runat="server" Visible="false"></asp:Label><br />
-            <asp:Label ID="lbResultado" runat="server" Visible="false"></asp:Label><br />
-            <asp:Button ID="btnLogin" runat="server" Text="Entrar" OnClick="btnLogin_Click" /><br />
+            <asp:Label ID="lbResultado" runat="server" Visible="false"></asp:Label>
+            <asp:Button ID="btnLogin" CssClass="btn btn-dark" runat="server" Text="Entrar" OnClick="btnLogin_Click" /><br />
         </div>
         <br />
         <div>
