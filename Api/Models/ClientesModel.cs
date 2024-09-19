@@ -10,5 +10,18 @@ namespace Api.Models
         public string Senha { get; set; }
         public string Telefone { get; set; }
         public DateTime DataNascimento { get; set; }
+
+        public ClientesModel() { }
+
+        public ClientesModel(ClientesRequest request, ClientesModel clientes)
+        {
+
+            Nome = request.Nome;
+            Email = request.Email;
+            Telefone = request.Telefone;
+            DataNascimento = request.DataNascimento;
+        }
     }
+
+
 }
