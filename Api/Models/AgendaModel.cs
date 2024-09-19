@@ -7,5 +7,6 @@
         public TatuadoresModel Tatuador { get; set; }
         public DateTimeOffset DataSessao { get; set; }
         public TimeSpan Duracao { get; set; }
+        public string Status { get; set; }
     }
 }
