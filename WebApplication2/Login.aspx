@@ -12,7 +12,7 @@
             <asp:TextBox ID="txtSenha" runat="server" TextMode="Password" CssClass="form-control"></asp:TextBox><br />
             <asp:Label ID="lbResultadoSenha" runat="server" Visible="false"></asp:Label><br />
             <asp:Label ID="lbResultado" runat="server" Visible="false"></asp:Label>
-            <asp:Button ID="btnLogin" CssClass="btn btn-dark" runat="server" Text="Entrar" OnClick="btnLogin_Click" /><br />
+            <asp:Button ID="btnLogin" runat="server" Text="Entrar" OnClick="btnLogin_Click" CssClass="btn btn-dark" /><br />
         </div>
         <br />
         <div>

@@ -24,26 +24,26 @@
     </asp:GridView>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:SiriusTattooConnectionString2 %>" SelectCommand="SELECT '~/imagemTatuagem/' + Imagem as caminhoImagem, * FROM [Tatuagens]"></asp:SqlDataSource>
     <br />
-    <asp:Button ID="btnCadastrarTatuagem" runat="server" Text="Cadastrar Nova Tatuagem" Visible="false" OnClick="btnCadastrarTatuagem_Click" Width="237px" /><br />
+    <asp:Button ID="btnCadastrarTatuagem" runat="server" Text="Cadastrar Nova Tatuagem" Visible="false" OnClick="btnCadastrarTatuagem_Click" Width="237px" CssClass="btn btn-dark" /><br />
 
-    <asp:Panel ID="panelCadastroTatuagem" runat="server" Visible="false">
+    <asp:Panel ID="panelCadastroTatuagem" runat="server" Visible="false"><br />
         <div>
             <h1>Adicionar Tatuagem</h1>
             <br />
-            <label>Nome Tatuagem:</label><br />
-            <asp:TextBox ID="txtNomeTatuagem" runat="server"></asp:TextBox><br />
-            <label>Descrição:</label><br />
-            <asp:TextBox ID="txtDescricaoTatuagem" runat="server"></asp:TextBox><br />
-            <label>Preço:</label><br />
-            <asp:TextBox ID="txtPreco" runat="server"></asp:TextBox><br />
-            <label>Tatuador ID:</label><br />
-            <asp:TextBox ID="txtTatuador" runat="server"></asp:TextBox><br />
-            <label>Imagem:</label><br />
+            <label>Nome Tatuagem:</label>
+            <asp:TextBox ID="txtNomeTatuagem" runat="server" CssClass="form-control"></asp:TextBox><br />
+            <label>Descrição:</label>
+            <asp:TextBox ID="txtDescricaoTatuagem" runat="server" CssClass="form-control"></asp:TextBox><br />
+            <label>Preço:</label>
+            <asp:TextBox ID="txtPreco" runat="server" CssClass="form-control"></asp:TextBox><br />
+            <label>Tatuador ID:</label>
+            <asp:TextBox ID="txtTatuador" runat="server" CssClass="form-control"></asp:TextBox><br />
+            <label>Imagem:</label>
             <asp:FileUpload ID="fupImagemTatuagem" runat="server" Width="294px" /><br />
             <asp:Label ID="lbResultado" runat="server" Visible="false"></asp:Label><br />
 
-            <asp:Button ID="btnCancelarAddTatuagem" runat="server" Text="Cancelar" OnClick="btnCancelarAddTatuagem_Click" />
-            <asp:Button ID="btnAddTatuagem" runat="server" Text="Adicionar" OnClick="btnAddTatuagem_Click" />
+            <asp:Button ID="btnCancelarAddTatuagem" runat="server" Text="Cancelar" OnClick="btnCancelarAddTatuagem_Click" CssClass="btn btn-outline-dark" />
+            <asp:Button ID="btnAddTatuagem" runat="server" Text="Adicionar" OnClick="btnAddTatuagem_Click" CssClass="btn btn-dark" />
 
 
         </div>

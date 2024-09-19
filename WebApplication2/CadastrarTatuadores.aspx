@@ -3,22 +3,22 @@
     <formview ID="formCadastrarTatuagem" runat="server">
     <div>
         <h1>Cadastrar Tatuador</h1><br />
-        <label>Nome Completo:</label><br />
-        <asp:TextBox ID="txtNomeTatuador" runat="server"></asp:TextBox><br />
-        <label>Email:</label><br />
-        <asp:TextBox ID="txtEmailTatuador" runat="server"></asp:TextBox><br />
-        <label>Telefone:</label><br />
-        <asp:TextBox ID="txtTelefoneTatuador" runat="server"></asp:TextBox><br />
-        <label>Especialidade:</label><br />
-        <asp:TextBox ID="txtEspecialidade" runat="server"></asp:TextBox><br />
-        <label>Senha:</label><br />
-        <asp:TextBox ID="txtSenhaTatuador" runat="server" TextMode="Password"></asp:TextBox><br />
-        <label>Repetir Senha:</label><br />
-        <asp:TextBox ID="txtRepetirSenhaTatuador" runat="server" TextMode="Password"></asp:TextBox> <br />
-        <asp:Label ID="lblResultado" runat="server" Visible="false"></asp:Label><br /><br />
+        <label>Nome Completo:</label>
+        <asp:TextBox ID="txtNomeTatuador" runat="server" CssClass="form-control"></asp:TextBox><br />
+        <label>Email:</label>
+        <asp:TextBox ID="txtEmailTatuador" runat="server" CssClass="form-control"></asp:TextBox><br />
+        <label>Telefone:</label>
+        <asp:TextBox ID="txtTelefoneTatuador" runat="server" CssClass="form-control"></asp:TextBox><br />
+        <label>Especialidade:</label>
+        <asp:TextBox ID="txtEspecialidade" runat="server" CssClass="form-control"></asp:TextBox><br />
+        <label>Senha:</label>
+        <asp:TextBox ID="txtSenhaTatuador" runat="server" TextMode="Password" CssClass="form-control"></asp:TextBox><br />
+        <label>Repetir Senha:</label>
+        <asp:TextBox ID="txtRepetirSenhaTatuador" runat="server" TextMode="Password" CssClass="form-control"></asp:TextBox> <br />
+        <asp:Label ID="lblResultado" runat="server" Visible="false"></asp:Label><br />
 
-        <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" OnClick="btnCancelar_Click" />
-        <asp:Button ID="btnCadastrarTatuador" runat="server" Text="Cadastrar" OnClick="btnCadastrarTatuador_Click" />
+        <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" OnClick="btnCancelar_Click" CssClass="btn btn-outline-dark" />
+        <asp:Button ID="btnCadastrarTatuador" runat="server" Text="Cadastrar" OnClick="btnCadastrarTatuador_Click" CssClass="btn btn-dark" />
 
     </div>
         </formview>
