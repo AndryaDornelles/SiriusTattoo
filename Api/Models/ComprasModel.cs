@@ -1,4 +1,6 @@
-﻿namespace Api.Models
+﻿using System.Text.Json.Serialization;
+
+namespace Api.Models
 {
     public class ComprasModel
     {
@@ -8,7 +10,9 @@
         public DateTimeOffset DataCompra {  get; set; }
 
         //Navegações
-        public virtual ClientesModel ClienteNav { get; set; }
-        public virtual TatuagensModel TatuagemNav { get; set; }
+        [JsonIgnore]
+        public virtual ClientesModel? ClienteNav { get; set; }
+        [JsonIgnore]
+        public virtual TatuagensModel? TatuagemNav { get; set; }
     }
 }
