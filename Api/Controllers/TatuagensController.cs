@@ -28,6 +28,21 @@ namespace Api.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
+        [HttpGet("Tatuador/{Id}")]
+        public IActionResult BuscarPorTatuador(long Id)
+        {
+            try
+            {
+                var lista = _tatuagensRepository.BuscarPorTatuador(Id);
+                return Ok(lista);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+
+        }
+
         [HttpPost("Cadastrar")]
         public async Task<IActionResult> Register([FromBody] TatuagensModel tatuagem)
         {

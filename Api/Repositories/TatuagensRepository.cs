@@ -21,6 +21,10 @@ namespace Api.Repositories
         {
             return _context.Tatuagens;
         }
+        public IEnumerable<TatuagensModel> BuscarPorTatuador(long tatuadorId)
+        {
+            return _context.Tatuagens.Where(t => t.TatuadorId == tatuadorId).ToList();
+        }
         public async Task<long> CadastrarTatuagem(TatuagensModel tatuagem)
         {
             try
@@ -33,8 +37,6 @@ namespace Api.Repositories
             {
                 throw new Exception("Erro ao cadastrar tatuagem.", ex);
             }
-
-
-        }
+        }  
     }
 }

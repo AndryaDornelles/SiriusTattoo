@@ -1,5 +1,63 @@
 [
   {
+    "ContainingType": "Api.Controllers.ComprasController",
+    "Method": "BuscarPorCliente",
+    "RelativePath": "api/Compras/Cliente/{Id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.ComprasController",
+    "Method": "Register",
+    "RelativePath": "api/Compras/Comprar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "comprasRequest",
+        "Type": "Api.Models.ComprasRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.ComprasController",
+    "Method": "BuscarTodas",
+    "RelativePath": "api/Compras/Listar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.ComprasController",
+    "Method": "BuscarPorTatuador",
+    "RelativePath": "api/Compras/Tatuador/{Id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Api.Controllers.TatuagensController",
     "Method": "Register",
     "RelativePath": "api/Tatuagens/Cadastrar",
@@ -23,6 +81,22 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.TatuagensController",
+    "Method": "BuscarPorTatuador",
+    "RelativePath": "api/Tatuagens/Tatuador/{Id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {
