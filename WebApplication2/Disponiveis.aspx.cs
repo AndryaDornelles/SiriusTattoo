@@ -12,34 +12,39 @@ namespace WebApplication2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            // Verifica se o usuário está logado
-            if (Session["UserEmail"] != null)
+            if (!IsPostBack)
             {
-                
-                string userEmail = Session["UserEmail"].ToString();
+                CarregarTatuadores();
 
-                // Conectar ao banco de dados e verificar o tipo de usuário
-                using (SiriusTattooEntities ctx = new SiriusTattooEntities())
+                // Verifica se o usuário está logado
+                if (Session["UserEmail"] != null)
                 {
-                    var tatuador = ctx.Tatuadores.FirstOrDefault(t => t.Email == userEmail);
 
-                    if (tatuador != null)
+                    string userEmail = Session["UserEmail"].ToString();
+
+                    // Conectar ao banco de dados e verificar o tipo de usuário
+                    using (SiriusTattooEntities ctx = new SiriusTattooEntities())
                     {
-                        // Tatuador consegue visualizar o botão
-                        btnCadastrarTatuagem.Visible = true;
+                        var tatuador = ctx.Tatuadores.FirstOrDefault(t => t.Email == userEmail);
+
+                        if (tatuador != null)
+                        {
+                            // Tatuador consegue visualizar o botão
+                            btnCadastrarTatuagem.Visible = true;
+                        }
+                        else
+                        {
+                            // O usuário não é um tatuador, esconde o botão.
+                            btnAddTatuagem.Visible = false;
+                        }
+
                     }
-                    else
-                    {
-                        // O usuário não é um tatuador, esconde o botão.
-                        btnAddTatuagem.Visible = false;
-                    }
-                    
                 }
-            }
-            else
-            {
-                // Nenhum usuário logado, esconda o botão
-                btnAddTatuagem.Visible = false;
+                else
+                {
+                    // Nenhum usuário logado, esconda o botão
+                    btnAddTatuagem.Visible = false;
+                }
             }
         }
 
@@ -138,7 +143,7 @@ namespace WebApplication2
                     lbResultado.Visible = true;
                 }
             }
-            
+
         }
 
         protected void btnCancelarAddTatuagem_Click(object sender, EventArgs e)
@@ -151,6 +156,98 @@ namespace WebApplication2
             // Obter o ID da tatuagem a partir do CommandArgument
             long tatuagemId = Convert.ToInt64(((Button)sender).CommandArgument);
             Response.Redirect("Compras.aspx?tatuagemId=" + tatuagemId);
+        }
+
+        protected void ddlTatuador_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(ddlTatuador.SelectedValue))
+            {
+                long tatuadorId = Convert.ToInt64(ddlTatuador.SelectedValue);
+                using (SiriusTattooEntities ctx = new SiriusTattooEntities())
+                {
+                    var tatuagens = ctx.Tatuagens
+                        .Where(t => t.Tatuador_Id == tatuadorId)
+                        .Select(t => new
+                        {
+                            t.Id,
+                            t.Nome,
+                            t.Descricao,
+                            t.Preco,
+                            t.Tatuador_Id,
+                            t.Imagem,
+                            caminhoImagem = "/imagemTatuagem/" + t.Imagem // Mapeia o caminho da imagem
+                        })
+                        .ToList();
+                    GridView1.DataSource = tatuagens;
+                    GridView1.DataBind();
+                }
+            }
+            else
+            {
+                // Se nenhum tatuador for selecionado, você pode limpar o GridView
+                GridView1.DataSource = null; // Limpa a fonte de dados
+                GridView1.DataBind(); // Atualiza o GridView
+            }
+
+        }
+        private void CarregarTatuadores()
+        {
+            try
+            {
+                using (SiriusTattooEntities ctx = new SiriusTattooEntities())
+                {
+                    var tatuadores = ctx.Tatuadores.ToList(); //Carrega todos os tatuadores do banco de dados
+                    ddlTatuador.DataSource = tatuadores;
+                    ddlTatuador.DataTextField = "Nome"; // Nome a ser exibido
+                    ddlTatuador.DataValueField = "Id"; // Id a ser usado como valor
+                    ddlTatuador.DataBind();
+
+                    ddlTatuador.Items.Insert(0, new ListItem("Selecione um Tatuador", "")); // Adiciona uma opção inicial
+
+                }
+            }
+            catch (Exception ex)
+            {
+                lbResultado.Text = "Erro ao carregar tatuadores: " + ex.Message;
+                lbResultado.Visible = true;
+            }
+        }
+
+        protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            GridView1.PageIndex = e.NewPageIndex; // Define o novo índice de página
+            CarregarTatuagens(); // Método que você deve criar para carregar os dados do GridView novamente
+        }
+        private void CarregarTatuagens()
+        {
+            long tatuadorId;
+            if (long.TryParse(ddlTatuador.SelectedValue, out tatuadorId))
+            {
+                using (SiriusTattooEntities ctx = new SiriusTattooEntities())
+                {
+                    var tatuagens = ctx.Tatuagens
+                        .Where(t => t.Tatuador_Id == tatuadorId)
+                        .Select(t => new
+                        {
+                            t.Id,
+                            t.Nome,
+                            t.Descricao,
+                            t.Preco,
+                            t.Tatuador_Id,
+                            t.Imagem,
+                            caminhoImagem = "/imagemTatuagem/" + t.Imagem
+                        })
+                        .ToList();
+
+                    GridView1.DataSource = tatuagens;
+                    GridView1.DataBind();
+                }
+            }
+            else
+            {
+                GridView1.DataSource = null;
+                GridView1.DataBind();
+            }
         }
     }
 }

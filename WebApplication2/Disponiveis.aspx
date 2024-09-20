@@ -1,6 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Disponiveis.aspx.cs" Inherits="WebApplication2.WebForm4" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" AllowPaging="True" AllowSorting="True" DataKeyNames="Id" Font-Names="false" Font-Underline="False" PageSize="1" Width="559px">
+
+    <asp:DropDownList ID="ddlTatuador" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlTatuador_SelectedIndexChanged"></asp:DropDownList>
+
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" AllowPaging="True" AllowSorting="True" OnPageIndexChanging="GridView1_PageIndexChanging" DataKeyNames="Id" Font-Names="false" Font-Underline="False" PageSize="1" Width="559px">
     <Columns>
         <asp:ImageField DataImageUrlField="caminhoImagem" ControlStyle-Height="500px" HeaderText="Tatuagem">
 <ControlStyle Height="500px"></ControlStyle>
@@ -22,7 +25,12 @@
 
         <HeaderStyle HorizontalAlign="Center" Wrap="True" />
     </asp:GridView>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:SiriusTattooConnectionString2 %>" SelectCommand="SELECT '~/imagemTatuagem/' + Imagem as caminhoImagem, * FROM [Tatuagens]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:SiriusTattooConnectionString2 %>" 
+    SelectCommand="SELECT '~/imagemTatuagem/' + Imagem as caminhoImagem, * FROM [Tatuagens] WHERE Tatuador_Id = @Tatuador_Id">
+    <SelectParameters>
+        <asp:Parameter Name="Tatuador_Id" Type="Int32" />
+    </SelectParameters>
+</asp:SqlDataSource>
     <br />
     <asp:Button ID="btnCadastrarTatuagem" runat="server" Text="Cadastrar Nova Tatuagem" Visible="false" OnClick="btnCadastrarTatuagem_Click" Width="237px" CssClass="btn btn-dark" /><br />
 
