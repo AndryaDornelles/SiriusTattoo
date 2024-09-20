@@ -73,14 +73,14 @@ namespace WebApplication2
                 lbResultadoSenha.Visible = false;
             }
             return isValid;
-            
+
         }
         #endregion
 
         private bool AuthenticateUser(string email, string senha)
-        { 
+        {
             Clientes clientes = new Clientes();
-            Tatuadores tatuadores = new Tatuadores();  
+            Tatuadores tatuadores = new Tatuadores();
 
             using (SiriusTattooEntities ctx = new SiriusTattooEntities())
             {
@@ -104,7 +104,7 @@ namespace WebApplication2
                 return clientes != null || tatuadores == null;
             }
         }
-        private string HashPassword(string password) 
+        private string HashPassword(string password)
         {
             // SHA-256 é uma função de hash criptográfico que gera um valor de 256 bits (32 bytes) a partir da entrada.
             using (var sha256 = System.Security.Cryptography.SHA256.Create())
