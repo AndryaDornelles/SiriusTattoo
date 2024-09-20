@@ -6,7 +6,7 @@ namespace Api.Repositories
 {
     public class TatuadoresRepository
     {
-        private readonly DataContext context;
+        private readonly DataContext _context;
 
         public TatuadoresRepository(IConfiguration configuration)
         {
@@ -14,15 +14,15 @@ namespace Api.Repositories
             options.UseSqlServer(configuration.GetConnectionString("connection"));
 
             options.UseSqlServer();
-            context = new DataContext(options.Options);
+            _context = new DataContext(options.Options);
         }
 
-        //Que já estou utilizando no WebForms
-        public TatuadoresModel AutenticarCliente(string email, string senha)
+        // Método para autenticar tatuador
+        public TatuadoresModel AutenticarUser(string email, string senha)
         {
             string hashedSenha = HashPassword(senha);
 
-            var tatuador = context.Tatuadores.FirstOrDefault(t => t.Email == email && t.Senha == hashedSenha);
+            var tatuador = _context.Tatuadores.FirstOrDefault(t => t.Email == email && t.Senha == senha);
             return tatuador;
         }
         private string HashPassword(string password)
@@ -34,6 +34,23 @@ namespace Api.Repositories
                 return BitConverter.ToString(bytes).Replace("-", "").ToLower();
             }
         }
+        public IEnumerable<TatuadoresModel> BuscarTodos()
+        {
+            return _context.Tatuadores;
+        }
+        public async Task<long> CadastrarTatuador(TatuadoresModel tatuador)
+        {
+            try
+            {
+                await _context.Tatuadores.AddAsync(tatuador);
+                await _context.SaveChangesAsync();
+                return tatuador.Id;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao cadastrar tatuador.", ex);
+            }
 
+        }
     }
 }

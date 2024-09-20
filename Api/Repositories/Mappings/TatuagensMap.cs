@@ -33,13 +33,13 @@ namespace Api.Repositories.Mappings
                 .IsRequired();
 
             // Configura o relacionamento com Tatuador
-            builder.Property(x => x.Tatuadores)
+            builder.Property(x => x.TatuadorId)
                 .HasColumnName("Tatuador_Id")
                 .IsRequired();
 
-            builder.HasOne(x => x.Tatuadores)
-                .WithMany() // Um tatuador pode ter várias Tatuagens
-                .HasForeignKey(x => x.Tatuadores.Id); // Define a chave estrangeira
+            builder.HasOne(x => x.TatuadorNav) // Navegação
+                .WithMany(t => t.Tatuagens) // Um tatuador pode ter várias Tatuagens
+                .HasForeignKey(x => x.TatuadorId); // Define a chave estrangeira
 
             builder.Property(x => x.Imagem)
                 .HasColumnName("Imagem")

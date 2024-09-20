@@ -17,12 +17,12 @@ namespace Api.Repositories
             context = new DataContext(options.Options);
         }
 
-        //Que já estou utilizando no WebForms
-        public ClientesModel AutenticarCliente(string email, string senha)
+        // Método para autenticar cliente
+        public ClientesModel AutenticarUser(string email, string senha)
         {
             string hashedSenha = HashPassword(senha);
 
-            var cliente = context.Clientes.FirstOrDefault(c => c.Email == email && c.Senha == hashedSenha);
+            var cliente = context.Clientes.FirstOrDefault(c => c.Email == email && c.Senha == senha);
             return cliente;
         }
         private string HashPassword(string password)
@@ -34,16 +34,30 @@ namespace Api.Repositories
                 return BitConverter.ToString(bytes).Replace("-", "").ToLower();
             }
         }
-        public ClientesModel? BuscarPorID (int Id)
+
+        //Método para buscar cliente por Id
+        public ClientesModel? BuscarPorID (long Id)
         {
             return context.Clientes.Where(x => x.Id == Id).FirstOrDefault();
         }
 
+        //Método para buscar todos os clientes
         public IEnumerable<ClientesModel> BuscarTodos()
         {
             return context.Clientes;
         }
-
-
+        public async Task<long> CadastrarCliente(ClientesModel cliente)
+        {
+            try
+            {
+                await context.Clientes.AddAsync(cliente);
+                await context.SaveChangesAsync();
+                return cliente.Id;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao cadastrar tatuador.", ex);
+            }
+        }
     }
 }

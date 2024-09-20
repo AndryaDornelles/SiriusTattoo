@@ -4,7 +4,7 @@ namespace Api.Models
 {
     public class TatuadoresModel
     {
-        public int Id { get; set; } 
+        public long Id { get; set; } 
         public string Nome { get; set; }
         public string Email { get; set; }
         public string Senha { get; set; }
@@ -12,6 +12,6 @@ namespace Api.Models
         public string Especialidade { get; set; }
 
         [JsonIgnore]
-        public ICollection<TatuagensModel> Tatuagens { get; set; }
+        public ICollection<TatuagensModel>? Tatuagens { get; set; }
     }
 }

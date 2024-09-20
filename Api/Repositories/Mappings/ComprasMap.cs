@@ -21,22 +21,22 @@ namespace Api.Repositories.Mappings
                 .UseIdentityColumn();
 
             // Configura o relacionamento com Cliente
-            builder.Property(x => x.Cliente)
+            builder.Property(x => x.ClienteId)
                 .HasColumnName("Cliente_Id")
                 .IsRequired();
 
-            builder.HasOne(a => a.Cliente) // Navegação
+            builder.HasOne(a => a.ClienteNav) // Navegação
                 .WithMany() // Um cliente pode ter várias Compras
-                .HasForeignKey(a => a.Cliente.Id); // Define a chave estrangeira
+                .HasForeignKey(a => a.ClienteId); // Define a chave estrangeira
 
             // Configura o relacionamento com Tatuagem
-            builder.Property(x => x.Tatuagem)
+            builder.Property(x => x.TatuagemId)
                 .HasColumnName("Tatuagem_Id")
                 .IsRequired();
 
-            builder.HasOne(a => a.Tatuagem) // Navegação
+            builder.HasOne(a => a.TatuagemNav) // Navegação
                 .WithOne() // Uma tatuagem só pode ter uma Compra
-                .HasForeignKey<ComprasModel>(a => a.Tatuagem.Id);
+                .HasForeignKey<ComprasModel>(a => a.TatuagemId);
         }
     }
 }
