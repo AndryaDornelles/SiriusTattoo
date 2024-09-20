@@ -1,5 +1,63 @@
 [
   {
+    "ContainingType": "Api.Controllers.AgendaController",
+    "Method": "Register",
+    "RelativePath": "api/Agenda/Agendar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "agendaRequest",
+        "Type": "Api.Models.AgendaRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.AgendaController",
+    "Method": "BuscarPorCliente",
+    "RelativePath": "api/Agenda/Cliente/{Id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.AgendaController",
+    "Method": "BuscarToda",
+    "RelativePath": "api/Agenda/Listar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.AgendaController",
+    "Method": "BuscarPorTatuador",
+    "RelativePath": "api/Agenda/Tatuador/{Id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Api.Controllers.ComprasController",
     "Method": "BuscarPorCliente",
     "RelativePath": "api/Compras/Cliente/{Id}",

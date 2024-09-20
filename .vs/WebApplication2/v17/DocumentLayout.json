@@ -3,8 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0244A5F1-E7AE-4F99-9ADE-FEB8B32BEA2E}|Api\\Api.csproj|c:\\users\\andry\\source\\repos\\siriustattoo\\webapplication2\\api\\repositories\\agendarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0244A5F1-E7AE-4F99-9ADE-FEB8B32BEA2E}|Api\\Api.csproj|solutionrelative:api\\repositories\\agendarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0244A5F1-E7AE-4F99-9ADE-FEB8B32BEA2E}|Api\\Api.csproj|c:\\users\\andry\\source\\repos\\siriustattoo\\webapplication2\\api\\models\\agendarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0244A5F1-E7AE-4F99-9ADE-FEB8B32BEA2E}|Api\\Api.csproj|solutionrelative:api\\models\\agendarequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0244A5F1-E7AE-4F99-9ADE-FEB8B32BEA2E}|Api\\Api.csproj|c:\\users\\andry\\source\\repos\\siriustattoo\\webapplication2\\api\\controllers\\agendacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0244A5F1-E7AE-4F99-9ADE-FEB8B32BEA2E}|Api\\Api.csproj|solutionrelative:api\\controllers\\agendacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0244A5F1-E7AE-4F99-9ADE-FEB8B32BEA2E}|Api\\Api.csproj|c:\\users\\andry\\source\\repos\\siriustattoo\\webapplication2\\api\\controllers\\comprascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0244A5F1-E7AE-4F99-9ADE-FEB8B32BEA2E}|Api\\Api.csproj|solutionrelative:api\\controllers\\comprascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0244A5F1-E7AE-4F99-9ADE-FEB8B32BEA2E}|Api\\Api.csproj|c:\\users\\andry\\source\\repos\\siriustattoo\\webapplication2\\api\\repositories\\comprasrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0244A5F1-E7AE-4F99-9ADE-FEB8B32BEA2E}|Api\\Api.csproj|solutionrelative:api\\repositories\\comprasrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0244A5F1-E7AE-4F99-9ADE-FEB8B32BEA2E}|Api\\Api.csproj|c:\\users\\andry\\source\\repos\\siriustattoo\\webapplication2\\api\\controllers\\tatuadorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0244A5F1-E7AE-4F99-9ADE-FEB8B32BEA2E}|Api\\Api.csproj|solutionrelative:api\\controllers\\tatuadorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0244A5F1-E7AE-4F99-9ADE-FEB8B32BEA2E}|Api\\Api.csproj|c:\\users\\andry\\source\\repos\\siriustattoo\\webapplication2\\api\\models\\clientesrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0244A5F1-E7AE-4F99-9ADE-FEB8B32BEA2E}|Api\\Api.csproj|solutionrelative:api\\models\\clientesrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0244A5F1-E7AE-4F99-9ADE-FEB8B32BEA2E}|Api\\Api.csproj|c:\\users\\andry\\source\\repos\\siriustattoo\\webapplication2\\api\\repositories\\clientesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -32,45 +56,129 @@
         },
         {
           "DockedWidth": 347,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "ComprasController.cs",
+              "DocumentMoniker": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\Api\\Controllers\\ComprasController.cs",
+              "RelativeDocumentMoniker": "Api\\Controllers\\ComprasController.cs",
+              "ToolTip": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\Api\\Controllers\\ComprasController.cs",
+              "RelativeToolTip": "Api\\Controllers\\ComprasController.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAwEoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T20:54:28.836Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ComprasRepository.cs",
+              "DocumentMoniker": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\Api\\Repositories\\ComprasRepository.cs",
+              "RelativeDocumentMoniker": "Api\\Repositories\\ComprasRepository.cs",
+              "ToolTip": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\Api\\Repositories\\ComprasRepository.cs",
+              "RelativeToolTip": "Api\\Repositories\\ComprasRepository.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAACcAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T20:12:58.354Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "ClientesRepository.cs",
               "DocumentMoniker": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\Api\\Repositories\\ClientesRepository.cs",
               "RelativeDocumentMoniker": "Api\\Repositories\\ClientesRepository.cs",
               "ToolTip": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\Api\\Repositories\\ClientesRepository.cs",
               "RelativeToolTip": "Api\\Repositories\\ClientesRepository.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAwBMAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-20T19:29:00.439Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "TatuadoresController.cs",
               "DocumentMoniker": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\Api\\Controllers\\TatuadoresController.cs",
               "RelativeDocumentMoniker": "Api\\Controllers\\TatuadoresController.cs",
               "ToolTip": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\Api\\Controllers\\TatuadoresController.cs",
               "RelativeToolTip": "Api\\Controllers\\TatuadoresController.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAAAEUAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-20T03:47:30.163Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "ClientesController.cs",
               "DocumentMoniker": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\Api\\Controllers\\ClientesController.cs",
               "RelativeDocumentMoniker": "Api\\Controllers\\ClientesController.cs",
               "ToolTip": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\Api\\Controllers\\ClientesController.cs",
               "RelativeToolTip": "Api\\Controllers\\ClientesController.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAAAD8AAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-20T19:26:21.658Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 347,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AgendaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\Api\\Repositories\\AgendaRepository.cs",
+              "RelativeDocumentMoniker": "Api\\Repositories\\AgendaRepository.cs",
+              "ToolTip": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\Api\\Repositories\\AgendaRepository.cs",
+              "RelativeToolTip": "Api\\Repositories\\AgendaRepository.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAAADIAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T20:09:59.415Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AgendaController.cs",
+              "DocumentMoniker": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\Api\\Controllers\\AgendaController.cs",
+              "RelativeDocumentMoniker": "Api\\Controllers\\AgendaController.cs",
+              "ToolTip": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\Api\\Controllers\\AgendaController.cs",
+              "RelativeToolTip": "Api\\Controllers\\AgendaController.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAAAEYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T20:08:39.688Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AgendaRequest.cs",
+              "DocumentMoniker": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\Api\\Models\\AgendaRequest.cs",
+              "RelativeDocumentMoniker": "Api\\Models\\AgendaRequest.cs",
+              "ToolTip": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\Api\\Models\\AgendaRequest.cs",
+              "RelativeToolTip": "Api\\Models\\AgendaRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T20:19:43.335Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ClientesRequest.cs",
+              "DocumentMoniker": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\Api\\Models\\ClientesRequest.cs",
+              "RelativeDocumentMoniker": "Api\\Models\\ClientesRequest.cs",
+              "ToolTip": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\Api\\Models\\ClientesRequest.cs",
+              "RelativeToolTip": "Api\\Models\\ClientesRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T20:20:37.167Z",
               "EditorCaption": ""
             }
           ]
