@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -12,6 +14,7 @@ namespace WebApplication2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
             if (!IsPostBack)
             {
                 CarregarTatuadores();
@@ -47,7 +50,6 @@ namespace WebApplication2
                 }
             }
         }
-
         protected void btnCadastrarTatuagem_Click(object sender, EventArgs e)
         {
             panelCadastroTatuagem.Visible = true;
@@ -125,7 +127,7 @@ namespace WebApplication2
                         {
                             ctx.Tatuagens.Add(tatuagens);
                             ctx.SaveChanges();
-                            GridView1.DataBind();
+                            DataBind();
                         }
                         panelCadastroTatuagem.Visible = false;
                     }
@@ -160,6 +162,7 @@ namespace WebApplication2
 
         protected void ddlTatuador_SelectedIndexChanged(object sender, EventArgs e)
         {
+
             if (!string.IsNullOrEmpty(ddlTatuador.SelectedValue))
             {
                 long tatuadorId = Convert.ToInt64(ddlTatuador.SelectedValue);

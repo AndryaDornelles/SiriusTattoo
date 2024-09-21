@@ -6,7 +6,7 @@ namespace Api.Repositories
 {
     public class ClientesRepository
     {
-        private readonly DataContext context;
+        private readonly DataContext _context;
 
         public ClientesRepository(IConfiguration configuration)
         {
@@ -14,7 +14,7 @@ namespace Api.Repositories
             options.UseSqlServer(configuration.GetConnectionString("connection"));
 
             options.UseSqlServer();
-            context = new DataContext(options.Options);
+            _context = new DataContext(options.Options);
         }
 
         // Método para autenticar cliente
@@ -22,7 +22,7 @@ namespace Api.Repositories
         {
             string hashedSenha = HashPassword(senha);
 
-            var cliente = context.Clientes.FirstOrDefault(c => c.Email == email && c.Senha == senha);
+            var cliente = _context.Clientes.FirstOrDefault(c => c.Email == email && c.Senha == senha);
             return cliente;
         }
         private string HashPassword(string password)
@@ -34,30 +34,32 @@ namespace Api.Repositories
                 return BitConverter.ToString(bytes).Replace("-", "").ToLower();
             }
         }
-
-        //Método para buscar cliente por Id
         public ClientesModel? BuscarPorID (long Id)
         {
-            return context.Clientes.Where(x => x.Id == Id).FirstOrDefault();
+            return _context.Clientes.Where(x => x.Id == Id).FirstOrDefault();
         }
 
-        //Método para buscar todos os clientes
         public IEnumerable<ClientesModel> BuscarTodos()
         {
-            return context.Clientes;
+            return _context.Clientes;
         }
         public async Task<long> CadastrarCliente(ClientesModel cliente)
         {
             try
             {
-                await context.Clientes.AddAsync(cliente);
-                await context.SaveChangesAsync();
+                await _context.Clientes.AddAsync(cliente);
+                await _context.SaveChangesAsync();
                 return cliente.Id;
             }
             catch (Exception ex)
             {
                 throw new Exception("Erro ao cadastrar tatuador.", ex);
             }
+        }
+        public async Task<long> AlterarCliente(ClientesModel cliente)
+        {
+            _context.Entry(cliente).State = EntityState.Modified;
+            return _context.SaveChanges();
         }
     }
 }

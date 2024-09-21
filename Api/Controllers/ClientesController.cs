@@ -33,7 +33,7 @@ namespace Api.Controllers
         }
 
         [HttpPost("login")]
-        public IActionResult Login(LoginRequest request)
+        public IActionResult Login([FromForm]LoginRequest request)
         {
             if (request == null || string.IsNullOrEmpty(request.Email) || string.IsNullOrEmpty(request.Password))
             {
@@ -56,7 +56,7 @@ namespace Api.Controllers
             }
         }
         [HttpPost("Cadastro")]
-        public async Task<IActionResult> Register([FromBody] ClientesModel  cliente)
+        public async Task<IActionResult> Register([FromBody] ClientesModel cliente)
         {
             if (cliente == null)
             {
@@ -71,7 +71,6 @@ namespace Api.Controllers
             {
                 return StatusCode(500, ex.Message);
             }
-
         }
     }
 }

@@ -45,10 +45,16 @@ namespace WebApplication2
             string clienteEmail = Session["UserEmail"]?.ToString();
             long tatuagemId = Convert.ToInt64(Request.QueryString["tatuagemId"]);
             DateTime dataHoraSessao;
-            TimeSpan duracao;
+            TimeSpan duracao; //duração fixa de 2 horas
 
             // Combinar a data do calendário com a hora do DropDownList
             string dataSessaoStr = calendarDataSessao.SelectedDate.ToString("yyyy-MM-dd") + " " + ddlHoraSessao.SelectedItem.Text;
+
+            if (!calendarDataSessao.SelectedDate.Date.Equals(DateTime.Today) && calendarDataSessao.SelectedDate.Date < DateTime.Today)
+            {
+                lblDetalhes.Text = "Você não pode agendar uma sessão em uma data passada.";
+                return;
+            }
 
             if (DateTime.TryParse(dataSessaoStr, out dataHoraSessao) && TimeSpan.TryParse(txtDuracao.Text, out duracao))
             {
@@ -59,6 +65,16 @@ namespace WebApplication2
 
                     if (cliente != null && tatuagem != null)
                     {
+                        // Verifica se já existe um agendamento para a mesma data e hora
+                        var agendamentoExistente = ctx.Agenda.Any(a =>
+                            a.Data_Sessao == dataHoraSessao &&
+                            a.Tatuador_Id == tatuagem.Tatuador_Id);
+
+                        if (agendamentoExistente)
+                        {
+                            lblDetalhes.Text = "Esse horário já está agendado. Por favor, escolha outro horário.";
+                            return;
+                        }
                         Agenda novaAgenda = new Agenda
                         {
                             Cliente_Id = cliente.Id,
@@ -77,15 +93,13 @@ namespace WebApplication2
                     }
                     else
                     {
-                        // Tratar caso cliente ou tatuagem não encontrados
-                        Response.Redirect("Login.aspx");
+                        lblDetalhes.Text = "Cliente ou tatuagem não encontrados.";
                     }
                 }
             }
             else
             {
-                // Tratar erros de validação
-                // Exibir mensagem de erro ou alertar o usuário
+                lblDetalhes.Text = "Por favor, selecione uma data e hora válidas.";
             }
         }
     }

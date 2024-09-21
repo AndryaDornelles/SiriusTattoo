@@ -29,7 +29,7 @@ namespace WebApplication2
                         var tatuagem = ctx.Tatuagens.FirstOrDefault(t => t.Id == tatuagemId);
                         if (tatuagem != null)
                         {
-                            lblDetalhesTatuagem.Text = $"Você selecionou a tatuagem: {tatuagem.Nome} por {tatuagem.Preco:C}";
+                            lblTotal.Text = $"Você selecionou a tatuagem: {tatuagem.Nome} por {tatuagem.Preco:C}";
                         }
                     }
                 }
@@ -76,6 +76,43 @@ namespace WebApplication2
             else
             {
                 Response.Redirect("Login.aspx");
+            }
+        }
+
+        protected void btnRemover_Click(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            long tatuagemId = Convert.ToInt64(btn.CommandArgument);
+            string clienteEmail = Session["UserEmail"]?.ToString();
+
+            if (clienteEmail == null)
+            {
+                Response.Redirect("Login.aspx");
+                return;
+            }
+
+            using (SiriusTattooEntities ctx = new SiriusTattooEntities())
+            {
+                // Busca a compra correspondente ao tatuagemId
+                var cliente = ctx.Clientes.FirstOrDefault(c => c.Email == clienteEmail);
+                if (cliente != null)
+                {
+                    var compra = ctx.Compras.FirstOrDefault(c => c.Tatuagem_Id == tatuagemId && c.Cliente_Id == cliente.Id);
+                    if (compra != null)
+                    {
+                        ctx.Compras.Remove(compra);
+                        ctx.SaveChanges();
+                        Response.Redirect("Disponiveis.aspx");
+                    }
+                    else
+                    {
+                        lblDetalhesTatuagem.Text = "Tatuagem não encontrada no carrinho.";
+                    }
+                }
+                else
+                {
+                    Response.Redirect("Login.aspx");
+                }
             }
         }
     }

@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "Api\Api.csproj", "{0244A5F1-E7AE-4F99-9ADE-FEB8B32BEA2E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4BE6A708-344A-48BF-89B7-72DECEDD2ED2} = {4BE6A708-344A-48BF-89B7-72DECEDD2ED2}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication2", "WebApplication2\WebApplication2.csproj", "{4BE6A708-344A-48BF-89B7-72DECEDD2ED2}"
 EndProject

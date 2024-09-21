@@ -33,5 +33,9 @@ namespace WebApplication2
             Response.Redirect("Login.aspx");
            
         }
+        protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
+        {
+            // Lógica adicional durante o logout, se necessário
+        }
     }
 }
