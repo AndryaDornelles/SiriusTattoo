@@ -17,7 +17,6 @@
              <label>Repetir Senha</label>
              <asp:TextBox ID="txtRepetirSenha" runat="server" TextMode="Password" CssClass="form-control"></asp:TextBox><br />
              <asp:Label ID="lbResultado" runat="server" Visible="false"></asp:Label><br />
-
              <asp:Button ID="btnVoltar" runat="server" Text="Voltar" OnClick="btnVoltar_Click" OnClientClick="return confirmeSair()" CssClass="btn btn-outline-dark" />
              <asp:Button ID="btnCadastrar" runat="server" Text="Cadastrar" OnClick="btnCadastrar_Click" CssClass="btn btn-dark" />
 

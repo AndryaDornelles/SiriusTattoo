@@ -61,8 +61,9 @@
                 <li class="nav-item"><a class="nav-link" runat="server" href="Agenda.aspx">Agenda</a></li>
             </ul>
 
-            <div class="ms-auto">
-                <asp:LinkButton ID="btnLogout" runat="server" visible="false" OnClick="btnLogout_Click" OnClientClick="return confirmeSair()" ForeColor="black" CssClass="btn btn-danger">Logout</asp:LinkButton>
+            <div class="d-flex">
+                <asp:LinkButton ID="btnLogin" runat="server" Visible="true" OnClick="btnLogin_Click" CssClass="btn btn-outline-secondary" ForeColor="#33ccff">Log In</asp:LinkButton>
+                <asp:LinkButton ID="btnLogout" runat="server" visible="false" OnClick="btnLogout_Click" OnClientClick="return confirmeSair()" ForeColor="white" CssClass="btn btn-outline-danger">Logout</asp:LinkButton>
             </div>
         </div>
     </div>

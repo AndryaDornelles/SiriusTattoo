@@ -37,6 +37,7 @@ namespace WebApplication2
                     }
                 }
             }
+            pnlcarrinho.Visible = true;
         }
 
         protected void btnComprar_Click(object sender, EventArgs e)
@@ -85,6 +86,20 @@ namespace WebApplication2
         protected void btnRemover_Click(object sender, EventArgs e)
         {
             Response.Redirect("Disponiveis.aspx");
+        }
+
+        protected void btnPagar_Click(object sender, EventArgs e)
+        {
+            PnlPagamento.Visible = true;
+            GridView1.Visible = false;
+            pnlcarrinho.Visible = false;
+            lblTotal.Visible = false;
+        }
+
+        protected void Voltar_Click(object sender, EventArgs e)
+        {
+            PnlPagamento.Visible = false;
+            GridView1.Visible = true;
         }
 
         //        var clienteResponse = await HttpClient.GetAsync("$https://localhost:7154/api/Clientes/BuscarPorEmail?email={clienteEmail}");

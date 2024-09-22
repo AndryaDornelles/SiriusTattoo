@@ -16,6 +16,7 @@ namespace WebApplication2
             {
                 // Se usuário logado, exiba o botão para logout
                 btnLogout.Visible = true;
+                btnLogin.Visible = false;
             }
             else
             {
@@ -33,9 +34,9 @@ namespace WebApplication2
             Response.Redirect("Login.aspx");
            
         }
-        protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
+        protected void btnLogin_Click(object sender, EventArgs e)
         {
-            // Lógica adicional durante o logout, se necessário
+            Response.Redirect("Login.aspx");
         }
     }
 }
