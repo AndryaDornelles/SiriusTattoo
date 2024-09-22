@@ -15,7 +15,7 @@ namespace WebApplication2
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            if (!IsPostBack)
+        if (!IsPostBack)
             {
                 CarregarTatuadores();
 
@@ -250,6 +250,23 @@ namespace WebApplication2
             {
                 GridView1.DataSource = null;
                 GridView1.DataBind();
+            }
+        }
+        protected void btnAnterior_Click(object sender, EventArgs e)
+        {
+            if (GridView1.PageIndex > 0)
+            {
+                GridView1.PageIndex--;
+                CarregarTatuagens();
+            }
+        }
+
+        protected void btnProximo_Click(object sender, EventArgs e)
+        {
+            if (GridView1.PageIndex < GridView1.PageCount - 1)
+            {
+                GridView1.PageIndex++;
+                CarregarTatuagens();
             }
         }
     }

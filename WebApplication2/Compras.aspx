@@ -23,14 +23,14 @@
             <PagerSettings Mode="NextPrevious" />
         </asp:GridView>
     
-        <asp:Label ID="lblTotal" runat="server" CssClass="mt-3" Font-Bold="true"></asp:Label>
-        <asp:Label ID="lblDetalhesTatuagem" runat="server" Visible="true"></asp:Label>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
-            ConnectionString="<%$ ConnectionStrings:SiriusTattooConnectionString2 %>" 
-            SelectCommand="SELECT '~/imagemTatuagem/' + Imagem as caminhoImagem, * FROM [Tatuagens] WHERE Id = @TatuagemId">
-            <SelectParameters>
-                <asp:QueryStringParameter Name="TatuagemId" QueryStringField="tatuagemId" Type="Int64" />
-            </SelectParameters>
-        </asp:SqlDataSource>
-    </div>
+            <asp:Label ID="lblTotal" runat="server" CssClass="mt-3" Font-Bold="true"></asp:Label>
+    <asp:Label ID="lblDetalhesTatuagem" runat="server" Visible="true"></asp:Label>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server"
+        ConnectionString="<%$ ConnectionStrings:SiriusTattooConnectionString2 %>"
+        SelectCommand="SELECT '~/imagemTatuagem/' + Imagem as caminhoImagem, * FROM [Tatuagens] WHERE Id = @TatuagemId">
+        <SelectParameters>
+            <asp:QueryStringParameter Name="TatuagemId" QueryStringField="tatuagemId" Type="Int64" />
+        </SelectParameters>
+    </asp:SqlDataSource>
+</div>
 </asp:Content>

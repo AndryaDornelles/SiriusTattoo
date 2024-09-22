@@ -15,8 +15,7 @@ namespace WebApplication2
             {
                 Response.Redirect("Login.aspx");
             }
-
-            if (!IsPostBack)
+        if (!IsPostBack)
             {
                 for (int hour = 9; hour <= 19; hour += 2)
                 {
@@ -88,7 +87,7 @@ namespace WebApplication2
                         ctx.SaveChanges();
 
                         // Confirmar agendamento ou redirecionar para outra página
-                        Response.Redirect("Home.aspx");
+                        Response.Redirect("Agenda.aspx");
 
                     }
                     else
@@ -103,4 +102,5 @@ namespace WebApplication2
             }
         }
     }
+
 }

@@ -1,6 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using WebApplication2;
+using System;
 using System.Linq;
+using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -23,8 +25,9 @@ namespace WebApplication2
                 {
                     long tatuagemId = Convert.ToInt64(Request.QueryString["tatuagemId"]);
 
-                    // Aqui você pode buscar os detalhes da tatuagem
-                    using (SiriusTattooEntities ctx = new SiriusTattooEntities())
+
+                // Aqui você pode buscar os detalhes da tatuagem
+                using (SiriusTattooEntities ctx = new SiriusTattooEntities())
                     {
                         var tatuagem = ctx.Tatuagens.FirstOrDefault(t => t.Id == tatuagemId);
                         if (tatuagem != null)
@@ -91,6 +94,35 @@ namespace WebApplication2
                 return;
             }
 
+            //        var clienteResponse = await HttpClient.GetAsync("$https://localhost:7154/api/Clientes/BuscarPorEmail?email={clienteEmail}");
+
+            //        if (clienteResponse.IsSuccessStatusCode)
+            //        {
+            //            var cliente = await clienteResponse.Content.ReadFromJsonAsync<Clientes>();
+            //            if (cliente != null)
+            //            {
+            //                var removerResponse = await HttpClient.DeleteAsync($"<https://localhost:7154/api/Compras/Remover?clienteId={cliente.Id}&tatuagemId={tatuagemId}>");
+            //                if (removerResponse.IsSuccessStatusCode)
+            //                {
+            //                    Response.Redirect("Disponiveis.aspx");
+            //                }
+            //                else
+            //                {
+            //                    lblDetalhesTatuagem.Text = "Erro ao remover a tatuagem do carrinho.";
+            //                }
+            //            }
+            //            else
+            //            {
+            //                Response.Redirect("Login.aspx");
+            //            }
+            //        }
+            //        else
+            //        {
+            //            Response.Redirect("Login.aspx");
+            //        }
+            //    }
+            //}
+
             using (SiriusTattooEntities ctx = new SiriusTattooEntities())
             {
                 // Busca a compra correspondente ao tatuagemId
@@ -117,4 +149,3 @@ namespace WebApplication2
         }
     }
 }
-    
