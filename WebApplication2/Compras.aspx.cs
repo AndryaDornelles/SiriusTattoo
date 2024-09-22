@@ -26,8 +26,8 @@ namespace WebApplication2
                     long tatuagemId = Convert.ToInt64(Request.QueryString["tatuagemId"]);
 
 
-                // Aqui você pode buscar os detalhes da tatuagem
-                using (SiriusTattooEntities ctx = new SiriusTattooEntities())
+                    // Aqui você pode buscar os detalhes da tatuagem
+                    using (SiriusTattooEntities ctx = new SiriusTattooEntities())
                     {
                         var tatuagem = ctx.Tatuagens.FirstOrDefault(t => t.Id == tatuagemId);
                         if (tatuagem != null)
@@ -84,73 +84,36 @@ namespace WebApplication2
 
         protected void btnRemover_Click(object sender, EventArgs e)
         {
-            Button btn = (Button)sender;
-            long tatuagemId = Convert.ToInt64(btn.CommandArgument);
-            string clienteEmail = Session["UserEmail"]?.ToString();
-
-            if (clienteEmail == null)
-            {
-                Response.Redirect("Login.aspx");
-                return;
-            }
-
-            //        var clienteResponse = await HttpClient.GetAsync("$https://localhost:7154/api/Clientes/BuscarPorEmail?email={clienteEmail}");
-
-            //        if (clienteResponse.IsSuccessStatusCode)
-            //        {
-            //            var cliente = await clienteResponse.Content.ReadFromJsonAsync<Clientes>();
-            //            if (cliente != null)
-            //            {
-            //                var removerResponse = await HttpClient.DeleteAsync($"<https://localhost:7154/api/Compras/Remover?clienteId={cliente.Id}&tatuagemId={tatuagemId}>");
-            //                if (removerResponse.IsSuccessStatusCode)
-            //                {
-            //                    Response.Redirect("Disponiveis.aspx");
-            //                }
-            //                else
-            //                {
-            //                    lblDetalhesTatuagem.Text = "Erro ao remover a tatuagem do carrinho.";
-            //                }
-            //            }
-            //            else
-            //            {
-            //                Response.Redirect("Login.aspx");
-            //            }
-            //        }
-            //        else
-            //        {
-            //            Response.Redirect("Login.aspx");
-            //        }
-            //    }
-            //}
-
-            using (SiriusTattooEntities ctx = new SiriusTattooEntities())
-            {
-                // Busca a compra correspondente ao tatuagemId
-                var cliente = ctx.Clientes.FirstOrDefault(c => c.Email == clienteEmail);
-                if (cliente != null)
-                {
-                    var compra = ctx.Compras.FirstOrDefault(c => c.Tatuagem_Id == tatuagemId && c.Cliente_Id == cliente.Id);
-                    if (compra != null)
-                    {
-                        ctx.Compras.Remove(compra);
-                        ctx.SaveChanges();
-                        Response.Redirect("Disponiveis.aspx");
-                    }
-                    else
-                    {
-                        lblDetalhesTatuagem.Text = "Tatuagem não encontrada no carrinho.";
-                    }
-                }
-                else
-                {
-                    Response.Redirect("Login.aspx");
-                }
-            }
+            Response.Redirect("Disponiveis.aspx");
         }
 
-        protected void btnFinalizarCompra_Click(object sender, EventArgs e)
-        {
+        //        var clienteResponse = await HttpClient.GetAsync("$https://localhost:7154/api/Clientes/BuscarPorEmail?email={clienteEmail}");
 
-        }
+        //        if (clienteResponse.IsSuccessStatusCode)
+        //        {
+        //            var cliente = await clienteResponse.Content.ReadFromJsonAsync<Clientes>();
+        //            if (cliente != null)
+        //            {
+        //                var removerResponse = await HttpClient.DeleteAsync($"<https://localhost:7154/api/Compras/Remover?clienteId={cliente.Id}&tatuagemId={tatuagemId}>");
+        //                if (removerResponse.IsSuccessStatusCode)
+        //                {
+        //                    Response.Redirect("Disponiveis.aspx");
+        //                }
+        //                else
+        //                {
+        //                    lblDetalhesTatuagem.Text = "Erro ao remover a tatuagem do carrinho.";
+        //                }
+        //            }
+        //            else
+        //            {
+        //                Response.Redirect("Login.aspx");
+        //            }
+        //        }
+        //        else
+        //        {
+        //            Response.Redirect("Login.aspx");
+        //        }
+        //    }
+        //}
     }
 }

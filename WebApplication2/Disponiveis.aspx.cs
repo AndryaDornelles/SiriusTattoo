@@ -15,7 +15,7 @@ namespace WebApplication2
         protected void Page_Load(object sender, EventArgs e)
         {
 
-        if (!IsPostBack)
+            if (!IsPostBack)
             {
                 CarregarTatuadores();
 
@@ -50,6 +50,7 @@ namespace WebApplication2
                 }
             }
         }
+
         protected void btnCadastrarTatuagem_Click(object sender, EventArgs e)
         {
             panelCadastroTatuagem.Visible = true;
@@ -127,7 +128,7 @@ namespace WebApplication2
                         {
                             ctx.Tatuagens.Add(tatuagens);
                             ctx.SaveChanges();
-                            DataBind();
+                            GridView1.DataBind();
                         }
                         panelCadastroTatuagem.Visible = false;
                     }
@@ -162,7 +163,6 @@ namespace WebApplication2
 
         protected void ddlTatuador_SelectedIndexChanged(object sender, EventArgs e)
         {
-
             if (!string.IsNullOrEmpty(ddlTatuador.SelectedValue))
             {
                 long tatuadorId = Convert.ToInt64(ddlTatuador.SelectedValue);
@@ -250,23 +250,6 @@ namespace WebApplication2
             {
                 GridView1.DataSource = null;
                 GridView1.DataBind();
-            }
-        }
-        protected void btnAnterior_Click(object sender, EventArgs e)
-        {
-            if (GridView1.PageIndex > 0)
-            {
-                GridView1.PageIndex--;
-                CarregarTatuagens();
-            }
-        }
-
-        protected void btnProximo_Click(object sender, EventArgs e)
-        {
-            if (GridView1.PageIndex < GridView1.PageCount - 1)
-            {
-                GridView1.PageIndex++;
-                CarregarTatuagens();
             }
         }
     }
