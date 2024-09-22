@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Net.Http.Json;
 
 namespace WebApplication2
 {
@@ -40,50 +41,62 @@ namespace WebApplication2
             pnlcarrinho.Visible = true;
         }
 
-        protected void btnComprar_Click(object sender, EventArgs e)
-        {
-            Button btn = (Button)sender;
-            string tatuagemId = btn.CommandArgument;
-
-            // Obtém o ID do cliente da sessão
-            string clienteEmail = Session["UserEmail"]?.ToString();
-
-            if (clienteEmail != null && tatuagemId != null)
+        protected async void btnComprar_Click(object sender, EventArgs e)
             {
-                using (SiriusTattooEntities ctx = new SiriusTattooEntities())
+                Button btn = (Button)sender;
+                long tatuagemId = Convert.ToInt64(btn.CommandArgument);
+
+                // Obtém o ID do cliente da sessão
+                string clienteEmail = Session["UserEmail"]?.ToString();
+
+                if (clienteEmail != null)
                 {
-                    //busca o cliente pelo email para obter o Id
-                    var cliente = ctx.Clientes.FirstOrDefault(c => c.Email == clienteEmail);
-
-                    if (cliente != null)
+                    using (SiriusTattooEntities ctx = new SiriusTattooEntities())
                     {
-                        //cria um novo pedido
-                        Compras compras = new Compras
+                        // Busca o cliente pelo email para obter o Id
+                        var cliente = ctx.Clientes.FirstOrDefault(c => c.Email == clienteEmail);
+
+                        if (cliente != null)
                         {
-                            Cliente_Id = cliente.Id,
-                            Tatuagem_Id = Convert.ToInt64(tatuagemId),
-                            DataCompra = DateTime.Now
-                        };
+                            // Cria um objeto para enviar para a API
+                            var comprasRequest = new
+                            {
+                                ClienteId = cliente.Id,
+                                TatuagemId = tatuagemId
+                            };
 
-                        ctx.Compras.Add(compras);
-                        ctx.SaveChanges();
+                            // Chama a API
+                            using (HttpClient client = new HttpClient())
+                            {
+                                client.BaseAddress = new Uri("https://localhost:7154/api/");
+                                var response = await client.PostAsJsonAsync("Compras/Comprar", comprasRequest);
 
-                        // Redireciona para a página de agendamento de sessão
-                        Response.Redirect("AgendarSessao.aspx?tatuagemId=" + tatuagemId);
-                    }
-                    else
-                    {
-                        Response.Redirect("Login.aspx");
+                                if (response.IsSuccessStatusCode)
+                                {
+                                    // Redireciona para a página de agendamento de sessão
+                                    Response.Redirect("AgendarSessao.aspx?tatuagemId=" + tatuagemId);
+                                }
+                                else
+                                {
+                                    // Exibe uma mensagem de erro
+                                    lblDetalhesTatuagem.Text = "Erro ao realizar a compra. Tente novamente.";
+                                }
+                            }
+                        }
+                        else
+                        {
+                            Response.Redirect("Login.aspx");
+                        }
                     }
                 }
+                else
+                {
+                    Response.Redirect("Login.aspx");
+                }
             }
-            else
-            {
-                Response.Redirect("Login.aspx");
-            }
-        }
 
-        protected void btnRemover_Click(object sender, EventArgs e)
+
+    protected void btnRemover_Click(object sender, EventArgs e)
         {
             Response.Redirect("Disponiveis.aspx");
         }
