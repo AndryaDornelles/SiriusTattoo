@@ -101,34 +101,5 @@ namespace WebApplication2
             PnlPagamento.Visible = false;
             GridView1.Visible = true;
         }
-
-        //        var clienteResponse = await HttpClient.GetAsync("$https://localhost:7154/api/Clientes/BuscarPorEmail?email={clienteEmail}");
-
-        //        if (clienteResponse.IsSuccessStatusCode)
-        //        {
-        //            var cliente = await clienteResponse.Content.ReadFromJsonAsync<Clientes>();
-        //            if (cliente != null)
-        //            {
-        //                var removerResponse = await HttpClient.DeleteAsync($"<https://localhost:7154/api/Compras/Remover?clienteId={cliente.Id}&tatuagemId={tatuagemId}>");
-        //                if (removerResponse.IsSuccessStatusCode)
-        //                {
-        //                    Response.Redirect("Disponiveis.aspx");
-        //                }
-        //                else
-        //                {
-        //                    lblDetalhesTatuagem.Text = "Erro ao remover a tatuagem do carrinho.";
-        //                }
-        //            }
-        //            else
-        //            {
-        //                Response.Redirect("Login.aspx");
-        //            }
-        //        }
-        //        else
-        //        {
-        //            Response.Redirect("Login.aspx");
-        //        }
-        //    }
-        //}
     }
 }

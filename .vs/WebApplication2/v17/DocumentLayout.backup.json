@@ -5,34 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{4BE6A708-344A-48BF-89B7-72DECEDD2ED2}|WebApplication2\\WebApplication2.csproj|c:\\users\\andry\\source\\repos\\siriustattoo\\webapplication2\\webapplication2\\compras.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4BE6A708-344A-48BF-89B7-72DECEDD2ED2}|WebApplication2\\WebApplication2.csproj|solutionrelative:webapplication2\\compras.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BE6A708-344A-48BF-89B7-72DECEDD2ED2}|WebApplication2\\WebApplication2.csproj|C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\webapplication2\\agendarsessao.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{4BE6A708-344A-48BF-89B7-72DECEDD2ED2}|WebApplication2\\WebApplication2.csproj|solutionrelative:webapplication2\\agendarsessao.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BE6A708-344A-48BF-89B7-72DECEDD2ED2}|WebApplication2\\WebApplication2.csproj|C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\webapplication2\\compras.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{4BE6A708-344A-48BF-89B7-72DECEDD2ED2}|WebApplication2\\WebApplication2.csproj|solutionrelative:webapplication2\\compras.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BE6A708-344A-48BF-89B7-72DECEDD2ED2}|WebApplication2\\WebApplication2.csproj|c:\\users\\andry\\source\\repos\\siriustattoo\\webapplication2\\webapplication2\\cadastrar.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BE6A708-344A-48BF-89B7-72DECEDD2ED2}|WebApplication2\\WebApplication2.csproj|solutionrelative:webapplication2\\cadastrar.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BE6A708-344A-48BF-89B7-72DECEDD2ED2}|WebApplication2\\WebApplication2.csproj|c:\\users\\andry\\source\\repos\\siriustattoo\\webapplication2\\webapplication2\\pagamentoconfirmado.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}",
-      "RelativeMoniker": "D:0:0:{4BE6A708-344A-48BF-89B7-72DECEDD2ED2}|WebApplication2\\WebApplication2.csproj|solutionrelative:webapplication2\\pagamentoconfirmado.ascx||{F390D63C-F7D8-4E74-AA04-57C1ECF53D4D}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BE6A708-344A-48BF-89B7-72DECEDD2ED2}|WebApplication2\\WebApplication2.csproj|c:\\users\\andry\\source\\repos\\siriustattoo\\webapplication2\\webapplication2\\pagamentoconfirmado.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BE6A708-344A-48BF-89B7-72DECEDD2ED2}|WebApplication2\\WebApplication2.csproj|solutionrelative:webapplication2\\pagamentoconfirmado.ascx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BE6A708-344A-48BF-89B7-72DECEDD2ED2}|WebApplication2\\WebApplication2.csproj|c:\\users\\andry\\source\\repos\\siriustattoo\\webapplication2\\webapplication2\\disponiveis.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{4BE6A708-344A-48BF-89B7-72DECEDD2ED2}|WebApplication2\\WebApplication2.csproj|solutionrelative:webapplication2\\disponiveis.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BE6A708-344A-48BF-89B7-72DECEDD2ED2}|WebApplication2\\WebApplication2.csproj|C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\webapplication2\\site.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BE6A708-344A-48BF-89B7-72DECEDD2ED2}|WebApplication2\\WebApplication2.csproj|solutionrelative:webapplication2\\site.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 259,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,106 +22,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PagamentoConfirmado.ascx.cs",
-              "DocumentMoniker": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\WebApplication2\\PagamentoConfirmado.ascx.cs",
-              "RelativeDocumentMoniker": "WebApplication2\\PagamentoConfirmado.ascx.cs",
-              "ToolTip": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\WebApplication2\\PagamentoConfirmado.ascx.cs",
-              "RelativeToolTip": "WebApplication2\\PagamentoConfirmado.ascx.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-22T15:20:42.802Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PagamentoConfirmado.ascx",
-              "DocumentMoniker": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\WebApplication2\\PagamentoConfirmado.ascx",
-              "RelativeDocumentMoniker": "WebApplication2\\PagamentoConfirmado.ascx",
-              "ToolTip": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\WebApplication2\\PagamentoConfirmado.ascx",
-              "RelativeToolTip": "WebApplication2\\PagamentoConfirmado.ascx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003302|",
-              "WhenOpened": "2024-09-22T15:19:21.366Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Disponiveis.aspx",
-              "DocumentMoniker": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\WebApplication2\\Disponiveis.aspx",
-              "RelativeDocumentMoniker": "WebApplication2\\Disponiveis.aspx",
-              "ToolTip": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\WebApplication2\\Disponiveis.aspx",
-              "RelativeToolTip": "WebApplication2\\Disponiveis.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-09-22T14:05:38.546Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AgendarSessao.aspx",
-              "DocumentMoniker": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\WebApplication2\\AgendarSessao.aspx",
-              "RelativeDocumentMoniker": "WebApplication2\\AgendarSessao.aspx",
-              "ToolTip": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\WebApplication2\\AgendarSessao.aspx",
-              "RelativeToolTip": "WebApplication2\\AgendarSessao.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-09-21T05:23:38.71Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Compras.aspx",
-              "DocumentMoniker": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\WebApplication2\\Compras.aspx",
-              "RelativeDocumentMoniker": "WebApplication2\\Compras.aspx",
-              "ToolTip": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\WebApplication2\\Compras.aspx",
-              "RelativeToolTip": "WebApplication2\\Compras.aspx",
-              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-09-21T04:56:42.14Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Compras.aspx.cs",
               "DocumentMoniker": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\WebApplication2\\Compras.aspx.cs",
               "RelativeDocumentMoniker": "WebApplication2\\Compras.aspx.cs",
-              "ToolTip": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\WebApplication2\\Compras.aspx.cs*",
-              "RelativeToolTip": "WebApplication2\\Compras.aspx.cs*",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACcAAAAnAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\WebApplication2\\Compras.aspx.cs",
+              "RelativeToolTip": "WebApplication2\\Compras.aspx.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAAADsAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-21T04:59:51.276Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Cadastrar.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\WebApplication2\\Cadastrar.aspx.cs",
-              "RelativeDocumentMoniker": "WebApplication2\\Cadastrar.aspx.cs",
-              "ToolTip": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\WebApplication2\\Cadastrar.aspx.cs",
-              "RelativeToolTip": "WebApplication2\\Cadastrar.aspx.cs",
-              "ViewState": "AgIAAG4AAAAAAAAAAAAwwHgAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-22T13:51:39.241Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Site.Master.cs",
-              "DocumentMoniker": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\WebApplication2\\Site.Master.cs",
-              "RelativeDocumentMoniker": "WebApplication2\\Site.Master.cs",
-              "ToolTip": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\WebApplication2\\Site.Master.cs",
-              "RelativeToolTip": "WebApplication2\\Site.Master.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAuwCQAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-21T01:49:03.223Z",
+              "WhenOpened": "2024-09-22T17:36:46.583Z",
               "EditorCaption": ""
             }
           ]
