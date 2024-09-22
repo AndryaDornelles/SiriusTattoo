@@ -1,8 +1,9 @@
 ﻿<%@ Page Title="Carrinho de Compras" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Compras.aspx.cs" Inherits="WebApplication2.WebForm6" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="container mt-5">
-        <h2>Carrinho de Compras</h2>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" AllowPaging="True" AllowSorting="True" DataKeyNames="Id" Font-Names="false" Font-Underline="False" Width="559px">
+        <h2 class="text-center mb-4">Carrinho de Compras</h2>
+        
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" AllowPaging="True" AllowSorting="True" DataKeyNames="Id" CssClass="table table-hover">
             <Columns>
                 <asp:ImageField DataImageUrlField="caminhoImagem" ControlStyle-Height="200px" HeaderText="Tatuagem">
                     <ControlStyle Height="200px"></ControlStyle>
@@ -22,15 +23,30 @@
             </Columns>
             <PagerSettings Mode="NextPrevious" />
         </asp:GridView>
-    
-            <asp:Label ID="lblTotal" runat="server" CssClass="mt-3" Font-Bold="true"></asp:Label>
-    <asp:Label ID="lblDetalhesTatuagem" runat="server" Visible="true"></asp:Label>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server"
-        ConnectionString="<%$ ConnectionStrings:SiriusTattooConnectionString2 %>"
-        SelectCommand="SELECT '~/imagemTatuagem/' + Imagem as caminhoImagem, * FROM [Tatuagens] WHERE Id = @TatuagemId">
-        <SelectParameters>
-            <asp:QueryStringParameter Name="TatuagemId" QueryStringField="tatuagemId" Type="Int64" />
-        </SelectParameters>
-    </asp:SqlDataSource>
-</div>
+
+        <div class="text-end mt-3">
+            <asp:Label ID="lblTotal" runat="server" CssClass="font-weight-bold"></asp:Label>
+        </div>
+
+        <asp:Label ID="lblDetalhesTatuagem" runat="server"></asp:Label>
+
+        <asp:SqlDataSource ID="SqlDataSource1"
+            runat="server"
+            ConnectionString="<%$ ConnectionStrings:SiriusTattooConnectionString2 %>"
+            SelectCommand="SELECT '~/imagemTatuagem/' + Imagem as caminhoImagem, * FROM [Tatuagens] WHERE Id = @TatuagemId">
+            <SelectParameters>
+                <asp:QueryStringParameter Name="TatuagemId" QueryStringField="tatuagemId" Type="Int64"/>
+            </SelectParameters>
+        </asp:SqlDataSource>
+    </div>
+
+    <style>
+        h2 {
+            color: #343a40; /* Cor do título */
+        }
+        .card {
+            border: none; /* Remove bordas padrão */
+            margin-bottom: 20px; /* Espaçamento entre os cartões */
+        }
+    </style>
 </asp:Content>

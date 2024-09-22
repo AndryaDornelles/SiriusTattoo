@@ -147,5 +147,10 @@ namespace WebApplication2
                 }
             }
         }
+
+        protected void btnFinalizarCompra_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
