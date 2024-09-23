@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -39,12 +40,11 @@ namespace WebApplication2
             }
         }
 
-        protected void btnAgendar_Click(object sender, EventArgs e)
+        protected async void btnAgendar_Click(object sender, EventArgs e)
         {
             string clienteEmail = Session["UserEmail"]?.ToString();
             long tatuagemId = Convert.ToInt64(Request.QueryString["tatuagemId"]);
             DateTime dataHoraSessao;
-            TimeSpan duracao; //duração fixa de 2 horas
 
             // Combinar a data do calendário com a hora do DropDownList
             string dataSessaoStr = calendarDataSessao.SelectedDate.ToString("yyyy-MM-dd") + " " + ddlHoraSessao.SelectedItem.Text;
@@ -55,7 +55,7 @@ namespace WebApplication2
                 return;
             }
 
-            if (DateTime.TryParse(dataSessaoStr, out dataHoraSessao) && TimeSpan.TryParse(txtDuracao.Text, out duracao))
+            if (DateTime.TryParse(dataSessaoStr, out dataHoraSessao))
             {
                 using (SiriusTattooEntities ctx = new SiriusTattooEntities())
                 {
@@ -74,21 +74,33 @@ namespace WebApplication2
                             lblDetalhes.Text = "Esse horário já está agendado. Por favor, escolha outro horário.";
                             return;
                         }
-                        Agenda novaAgenda = new Agenda
+
+                        // Cria o objeto AgendaRequest
+                        var agendaRequest = new 
                         {
-                            Cliente_Id = cliente.Id,
-                            Tatuador_Id = tatuagem.Tatuador_Id,
-                            Data_Sessao = dataHoraSessao,
-                            Duracao = duracao,
+                            ClienteId = cliente.Id,
+                            TatuadorId = tatuagem.Tatuador_Id,
+                            DataSessao = dataHoraSessao,
                             Status = "Agendado" // ou outro status inicial desejado
                         };
 
-                        ctx.Agenda.Add(novaAgenda);
-                        ctx.SaveChanges();
+                        // Chamada à API usando HttpClient
+                        using (var httpClient = new HttpClient())
+                        {
+                            httpClient.BaseAddress = new Uri("https://localhost:7154/api/Agenda/");
+                            var response = await httpClient.PostAsJsonAsync("Agendar", agendaRequest);
 
-                        // Confirmar agendamento ou redirecionar para outra página
-                        Response.Redirect("Agenda.aspx");
-
+                            if (response.IsSuccessStatusCode)
+                            {
+                                // Redireciona ou exibe uma mensagem de sucesso
+                                Response.Redirect("Agenda.aspx");
+                            }
+                            else
+                            {
+                                var errorMessage = await response.Content.ReadAsStringAsync();
+                                lblDetalhes.Text = $"Erro ao agendar: {errorMessage}";
+                            }
+                        }
                     }
                     else
                     {

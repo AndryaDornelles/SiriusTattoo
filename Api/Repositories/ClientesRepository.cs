@@ -20,11 +20,12 @@ namespace Api.Repositories
         // Método para autenticar cliente
         public ClientesModel AutenticarUser(string email, string senha)
         {
-            string hashedSenha = HashPassword(senha);
+            string hashedSenha = HashPassword(senha); // Gere o hash da senha fornecida
 
-            var cliente = _context.Clientes.FirstOrDefault(c => c.Email == email && c.Senha == senha);
+            var cliente = _context.Clientes.FirstOrDefault(c => c.Email == email && c.Senha == hashedSenha);
             return cliente;
         }
+
         private string HashPassword(string password)
         {
             // SHA-256 é uma função de hash criptográfico que gera um valor de 256 bits (32 bytes) a partir da entrada.

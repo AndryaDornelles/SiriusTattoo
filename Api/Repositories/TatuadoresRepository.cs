@@ -22,9 +22,10 @@ namespace Api.Repositories
         {
             string hashedSenha = HashPassword(senha);
 
-            var tatuador = _context.Tatuadores.FirstOrDefault(t => t.Email == email && t.Senha == senha);
+            var tatuador = _context.Tatuadores.FirstOrDefault(t => t.Email == email && t.Senha == hashedSenha);
             return tatuador;
         }
+
         private string HashPassword(string password)
         {
             // SHA-256 é uma função de hash criptográfico que gera um valor de 256 bits (32 bytes) a partir da entrada.
