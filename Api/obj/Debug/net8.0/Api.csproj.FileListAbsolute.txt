@@ -251,3 +251,4 @@ C:\Users\andry\source\repos\SiriusTattoo\WebApplication2\Api\obj\Debug\net8.0\re
 C:\Users\andry\source\repos\SiriusTattoo\WebApplication2\Api\obj\Debug\net8.0\Api.pdb
 C:\Users\andry\source\repos\SiriusTattoo\WebApplication2\Api\obj\Debug\net8.0\Api.genruntimeconfig.cache
 C:\Users\andry\source\repos\SiriusTattoo\WebApplication2\Api\obj\Debug\net8.0\ref\Api.dll
+C:\Users\andry\source\repos\SiriusTattoo\WebApplication2\Api\bin\Debug\net8.0\System.ClientModel.dll

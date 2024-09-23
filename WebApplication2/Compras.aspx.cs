@@ -94,8 +94,6 @@ namespace WebApplication2
                     Response.Redirect("Login.aspx");
                 }
             }
-
-
     protected void btnRemover_Click(object sender, EventArgs e)
         {
             Response.Redirect("Disponiveis.aspx");

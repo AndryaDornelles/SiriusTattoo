@@ -3,6 +3,8 @@ using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Net.Http.Json;
 
 namespace WebApplication2
 {
@@ -18,22 +20,6 @@ namespace WebApplication2
             if (!IsPostBack)
             {
                 LoadAppointments();
-            }
-        }
-        public async Task AtualizarStatusAgendamentosPassados()
-        {
-            using (var ctx = new SiriusTattooEntities())
-            {
-                var agendamentos = await ctx.Agenda
-                    .Where(a => a.Data_Sessao < DateTime.Now && a.Status != "realizado")
-                    .ToListAsync();
-
-                foreach (var agendamento in agendamentos)
-                {
-                    agendamento.Status = "realizado"; // Atualiza o status
-                }
-
-                await ctx.SaveChangesAsync(); // Salva as alterações no banco de dados
             }
         }
 

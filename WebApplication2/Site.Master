@@ -75,7 +75,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Sírius Tattoo - Desenvolvido por <a href="https://github.com/AndryaDornelles" style="color:#0dcaf0" target="_blank" rel="noopener noreferrer">Andrya Dornelles</a> </p>
+                <p>&copy; <%: DateTime.UtcNow.Year %> - Sírius Tattoo - Desenvolvido por <a href="https://github.com/AndryaDornelles" style="color:#0dcaf0" target="_blank" rel="noopener noreferrer">Andrya Dornelles</a> </p>
             </footer>
         </div>
     </form>
