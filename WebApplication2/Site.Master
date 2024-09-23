@@ -56,8 +56,8 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto">
-                <li class="nav-item"><a class="nav-link" runat="server" href="~/">Home</a></li>
-                <li class="nav-item"><a class="nav-link" runat="server" href="~/Disponiveis">Tatuagens Disponíveis</a></li>
+                <li class="nav-item"><a class="nav-link" runat="server" href="~/Home.aspx">Home</a></li>
+                <li class="nav-item"><a class="nav-link" runat="server" href="~/Disponiveis.aspx">Tatuagens Disponíveis</a></li>
                 <li class="nav-item"><a class="nav-link" runat="server" href="Agenda.aspx">Agenda</a></li>
             </ul>
 

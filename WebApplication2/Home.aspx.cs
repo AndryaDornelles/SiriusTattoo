@@ -17,5 +17,10 @@ namespace WebApplication2
                 Response.Redirect("Login.aspx");
             }
         }
+
+        protected void btnComprar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
