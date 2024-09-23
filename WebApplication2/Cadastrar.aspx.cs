@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -15,11 +16,9 @@ namespace WebApplication2
             
         }
 
-        protected void btnCadastrar_Click(object sender, EventArgs e)
+        protected async void btnCadastrar_Click(object sender, EventArgs e)
         {
             #region | Validações |
-
-            // Define cores textBox antes das validações
             lbResultado.Visible = false;
             txtNome.BorderColor = Color.Black;
             txtEmail.BorderColor = Color.Black;
@@ -33,21 +32,22 @@ namespace WebApplication2
             string telefone = txtTelefone.Text;
             string senha = txtSenha.Text;
             string repetirSenha = txtRepetirSenha.Text;
-            
+
             // Validando se é maior de idade.
             decimal idade = 0;
 
-            // Controle de erro caso data = null 
             try
             {
                 DateTime dataNascimento = Convert.ToDateTime(dtNascimento.Text);
                 DateTime dataAtual = DateTime.Now;
                 idade = dataAtual.Subtract(dataNascimento).Days / 365;
             }
-            catch 
-            { 
+            catch
+            {
                 idade = 0;
             }
+
+            // Validações do formulário
             if (string.IsNullOrEmpty(dtNascimento.Text))
             {
                 lbResultado.Text = "Informe sua data de nascimento";
@@ -101,41 +101,36 @@ namespace WebApplication2
             #endregion
             else
             {
-                //Pesquisa no banco
-                // verifica se email já existe no banco de dados
-                // se estiver disponivel o email ele cadastra
-                try
+                // Envio do novo cliente à API
+                using (var client = new HttpClient())
                 {
-                    Clientes clientes = new Clientes();
-                    clientes.Nome = txtNome.Text;
-                    clientes.Email = txtEmail.Text;
-                    clientes.Telefone = txtTelefone.Text;
-                    clientes.Data_Nascimento = Convert.ToDateTime(dtNascimento.Text);
-                    clientes.Senha = txtSenha.Text;
+                    client.BaseAddress = new Uri("https://localhost:7154/api/v1/Clientes/");
 
-                    Clientes objValidador = new Clientes();
-                    
-                    objValidador = objValidador.consultarClientesPorEmail(txtEmail.Text);
-
-                    if (objValidador != null)
+                    var novoCliente = new 
                     {
-                        lbResultado.Visible = true;
-                        lbResultado.Text = "Email já cadastrado.";
-                    }
-                    else
-                    {
-                        clientes.cadastrarClientes(clientes);
+                        Nome = txtNome.Text,
+                        Email = txtEmail.Text,
+                        Senha = txtSenha.Text,
+                        Telefone = txtTelefone.Text,
+                        DataNascimento = Convert.ToDateTime(dtNascimento.Text)
+                    };
 
-                        // Exibe alerta de sucesso e redireciona após o alerta ser fechado
+                    var response = await client.PostAsJsonAsync("Cadastro", novoCliente);
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        // Cadastro bem-sucedido
                         string script = "alert('Cadastro efetuado com sucesso!'); window.location.href='Login.aspx';";
                         ClientScript.RegisterStartupScript(this.GetType(), "alert", script, true);
                     }
+                    else
+                    {
+                        var errorResponse = await response.Content.ReadAsStringAsync();
+                        lbResultado.Visible = true;
+                        lbResultado.Text = "Erro ao cadastrar: " + response.ReasonPhrase + " - " + errorResponse;
+                    }
                 }
-                catch (Exception ex)
-                {
-                    lbResultado.Text = "Erro: " + ex.Message;
-                    lbResultado.Visible = true;
-                }
+
             }
         }
 
