@@ -5,6 +5,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Net.Http;
+using System.Net.Http.Json;
+using System.Threading.Tasks;
 
 namespace WebApplication2
 {
@@ -124,7 +127,7 @@ namespace WebApplication2
             return isValid;
         }
 
-        protected void btnCadastrarTatuador_Click(object sender, EventArgs e)
+        protected async void btnCadastrarTatuador_Click(object sender, EventArgs e)
         {
             bool isValid = ValidateInputs();
             string nome = txtNomeTatuador.Text.Trim();
@@ -132,33 +135,40 @@ namespace WebApplication2
             string telefone = txtTelefoneTatuador.Text.Trim();
             string especialidade = txtEspecialidade.Text.Trim();
             string senha = txtSenhaTatuador.Text.Trim();
-            string repetirSenha = txtRepetirSenhaTatuador.Text.Trim();
+
+            if (!isValid) return;
 
             try
             {
-                Tatuadores tatuador = new Tatuadores();
-                tatuador.Nome = nome;
-                tatuador.Email = email;
-                tatuador.Telefone = telefone;
-                tatuador.Especialidade = especialidade;
-                tatuador.Senha = senha; 
-
-                Tatuadores objValidador = new Tatuadores();
-
-                objValidador = objValidador.consultarTatuadoresPorEmail(email);
-
-                if (objValidador != null)
+                // Criar o objeto para enviar à API
+                var tatuador = new 
                 {
-                    lblResultado.Visible = true;
-                    lblResultado.Text = "Email já cadastrado.";
-                    return;
+                    Nome = nome,
+                    Email = email,
+                    Telefone = telefone,
+                    Especialidade = especialidade,
+                    Senha = senha
+                };
+
+                // Fazer a chamada à API
+                using (var client = new HttpClient())
+                {
+                    client.BaseAddress = new Uri("https://localhost:7154/api/v1/Tatuadores/");
+                    var response = await client.PostAsJsonAsync("Cadastro", tatuador);
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        lblResultado.Visible = true;
+                        lblResultado.Text = "Cadastro Efetuado com sucesso!";
+                    }
+                    else
+                    {
+                        // Obter o conteúdo do erro
+                        var errorMessage = await response.Content.ReadAsStringAsync();
+                        lblResultado.Visible = true;
+                        lblResultado.Text = "Email já cadastrado!";
+                    }
                 }
-
-                tatuador.cadastrarTatuadores(tatuador);
-
-                //Depois de cadastrado notifica com uma mensagem
-                lblResultado.Visible = true;
-                lblResultado.Text = "Cadastro Efetuado";
             }
             catch (Exception ex)
             {
@@ -166,6 +176,7 @@ namespace WebApplication2
                 lblResultado.Visible = true;
             }
         }
+
         protected void btnCancelar_Click(object sender, EventArgs e)
         {
             Response.Redirect("Home.aspx");

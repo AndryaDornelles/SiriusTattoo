@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CadastrarTatuadores.aspx.cs" Inherits="WebApplication2.WebForm5" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CadastrarTatuadores.aspx.cs" Inherits="WebApplication2.WebForm5" Async="true" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <formview ID="formCadastrarTatuagem" runat="server">
     <div>
@@ -15,7 +15,9 @@
         <asp:TextBox ID="txtSenhaTatuador" runat="server" TextMode="Password" CssClass="form-control"></asp:TextBox><br />
         <label>Repetir Senha:</label>
         <asp:TextBox ID="txtRepetirSenhaTatuador" runat="server" TextMode="Password" CssClass="form-control"></asp:TextBox> <br />
-        <asp:Label ID="lblResultado" runat="server" Visible="false"></asp:Label><br />
+        <asp:Label ID="lblResultado" runat="server" Visible="false"></asp:Label>
+        <br />
+        <br />
 
         <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" OnClick="btnCancelar_Click" CssClass="btn btn-outline-dark" />
         <asp:Button ID="btnCadastrarTatuador" runat="server" Text="Cadastrar" OnClick="btnCadastrarTatuador_Click" CssClass="btn btn-dark" />
