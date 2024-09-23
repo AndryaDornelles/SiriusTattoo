@@ -34,6 +34,7 @@ namespace WebApplication2
                         {
                             // Tatuador consegue visualizar o botão
                             btnCadastrarTatuagem.Visible = true;
+                            btnCadastrarTatuador.Visible = true;
                         }
                         else
                         {
@@ -54,6 +55,10 @@ namespace WebApplication2
         protected void btnCadastrarTatuagem_Click(object sender, EventArgs e)
         {
             panelCadastroTatuagem.Visible = true;
+        }
+        protected void btnCadastrarTatuador_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CadastrarTatuadores.aspx");
         }
 
         protected void btnAddTatuagem_Click(object sender, EventArgs e)

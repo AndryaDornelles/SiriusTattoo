@@ -38,6 +38,7 @@
 
         <br />
         <asp:Button ID="btnCadastrarTatuagem" runat="server" Text="Cadastrar Nova Tatuagem" Visible="false" OnClick="btnCadastrarTatuagem_Click" CssClass="btn btn-dark mb-3" /><br />
+        <asp:Button ID="btnCadastrarTatuador" runat="server" Text="Cadastrar Novo Tatuador" Visible="false" OnClick="btnCadastrarTatuador_Click" CssClass="btn btn-dark mb-3" /><br />
 
         <asp:Panel ID="panelCadastroTatuagem" runat="server" Visible="false" CssClass="mt-4">
             <h1 class="mb-3">Adicionar Tatuagem</h1>

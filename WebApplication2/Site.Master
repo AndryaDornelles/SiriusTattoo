@@ -46,7 +46,7 @@
 
         <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" runat="server" href="~/">
+        <a class="navbar-brand" runat="server" href="~/Home.aspx">
             <img src="favicon.png" alt="Sírius Tattoo" style="height: 40px;" /> Sírius Tattoo
         </a>
         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
