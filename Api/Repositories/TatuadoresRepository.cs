@@ -39,6 +39,10 @@ namespace Api.Repositories
         {
             return _context.Tatuadores;
         }
+        public TatuadoresModel? BuscarPorId (long Id)
+        {
+            return _context.Tatuadores.Where(x => x.Id == Id).FirstOrDefault();
+        }
         public async Task<long> CadastrarTatuador(TatuadoresModel tatuador)
         {
             try
@@ -51,7 +55,32 @@ namespace Api.Repositories
             {
                 throw new Exception("Erro ao cadastrar tatuador.", ex);
             }
+        }
+        public async Task<long> DeletarTatuadorPorId(long id)
+        {
+            try
+            {
+                // Busca o tatuador pelo ID
+                var tatuador = await _context.Tatuadores.FindAsync(id);
 
+                if (tatuador == null)
+                {
+                    throw new Exception("Tatuador não encontrado.");
+                }
+
+                // Remove o tatuador do contexto
+                _context.Tatuadores.Remove(tatuador);
+
+                // Salva as alterações no banco de dados
+                await _context.SaveChangesAsync();
+
+                // Retorna o ID do tatuador removido
+                return tatuador.Id;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao remover cliente.", ex);
+            }
         }
     }
 }

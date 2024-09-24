@@ -2,6 +2,7 @@
 using Api.Repositories;
 using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor;
 using NuGet.Protocol.Core.Types;
 using LoginRequest = Api.Models.LoginRequest;
 
@@ -28,6 +29,20 @@ namespace Api.Controllers
             }
             catch (Exception ex)
             {
+                return StatusCode(500, ex.Message);
+            }
+        }
+        [HttpGet("BuscarCliente/{Id}")]
+        public IActionResult BuscarPorId(long Id)
+        {
+            try
+            {
+                var lista = _clientesRepository.BuscarPorId(Id);
+                return Ok(lista);
+            }
+            catch (Exception ex)
+            {
+
                 return StatusCode(500, ex.Message);
             }
         }
@@ -72,5 +87,33 @@ namespace Api.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
+        [HttpDelete("DeletarCliente/{id}")]
+        public async Task<IActionResult> DeletarCliente(long id)
+        {
+            try
+            {
+                // Busca o cliente pelo ID
+                var cliente = _clientesRepository.BuscarPorId(id);
+
+                // Verifica se o cliente foi encontrado
+                if (cliente == null)
+                {
+                    return NotFound("Cliente não encontrado.");
+                }
+
+                // Chama o método do repositório para deletar o cliente
+                await _clientesRepository.DeletarClientePorId(id);
+
+                // Retorna uma resposta de sucesso
+                return NoContent(); // HTTP 204: Requisição foi bem sucedida, mas sem conteúdo no corpo
+            }
+            catch (Exception ex)
+            {
+                // Retorna uma resposta de erro com o status HTTP 500 (Erro Interno)
+                return StatusCode(500, ex.Message);
+            }
+        }
     }
+
 }
+

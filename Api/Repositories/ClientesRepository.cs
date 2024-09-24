@@ -1,5 +1,6 @@
 ﻿using Api.Models;
 using Api.Repositories.Contexts;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.EntityFrameworkCore;
 
 namespace Api.Repositories
@@ -35,7 +36,7 @@ namespace Api.Repositories
                 return BitConverter.ToString(bytes).Replace("-", "").ToLower();
             }
         }
-        public ClientesModel? BuscarPorID (long Id)
+        public ClientesModel? BuscarPorId (long Id)
         {
             return _context.Clientes.Where(x => x.Id == Id).FirstOrDefault();
         }
@@ -57,10 +58,31 @@ namespace Api.Repositories
                 throw new Exception("Erro ao cadastrar tatuador.", ex);
             }
         }
-        public async Task<long> AlterarCliente(ClientesModel cliente)
+        public async Task<long> DeletarClientePorId(long id)
         {
-            _context.Entry(cliente).State = EntityState.Modified;
-            return _context.SaveChanges();
+            try
+            {
+                // Busca o cliente pelo ID
+                var cliente = await _context.Clientes.FindAsync(id);
+
+                if (cliente == null)
+                {
+                    throw new Exception("Cliente não encontrado.");
+                }
+
+                // Remove o cliente do contexto
+                _context.Clientes.Remove(cliente);
+
+                // Salva as alterações no banco de dados
+                await _context.SaveChangesAsync();
+
+                // Retorna o ID do cliente removido
+                return cliente.Id;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao remover cliente.", ex);
+            }
         }
     }
 }

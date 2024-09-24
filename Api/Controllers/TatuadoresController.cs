@@ -56,6 +56,20 @@ namespace Api.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
+        [HttpGet("BuscarTatuador/{Id}")]
+        public IActionResult BuscarPorId(long Id)
+        {
+            try
+            {
+                var lista = _tatuadoresRepository.BuscarPorId(Id);
+                return Ok(lista);
+            }
+            catch (Exception ex)
+            {
+
+                return StatusCode(500, ex.Message);
+            }
+        }
 
         [HttpPost("Cadastro")]
         public async Task<IActionResult> Register([FromBody] TatuadoresModel tatuador)
@@ -74,5 +88,32 @@ namespace Api.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
+        [HttpDelete("DeletarTatuador/{id}")]
+        public async Task<IActionResult> DeletarTatuador(long id)
+        {
+            try
+            {
+                // Busca o tatuador pelo ID
+                var cliente = _tatuadoresRepository.BuscarPorId(id);
+
+                // Verifica se o tatuador foi encontrado
+                if (cliente == null)
+                {
+                    return NotFound("Tatuador não encontrado.");
+                }
+
+                // Chama o método do repositório para deletar o tatuador
+                await _tatuadoresRepository.DeletarTatuadorPorId(id);
+
+                // Retorna uma resposta de sucesso
+                return NoContent(); // HTTP 204: Requisição foi bem sucedida, mas sem conteúdo no corpo
+            }
+            catch (Exception ex)
+            {
+                // Retorna uma resposta de erro com o status HTTP 500 (Erro Interno)
+                return StatusCode(500, ex.Message);
+            }
+        }
+
     }
 }
