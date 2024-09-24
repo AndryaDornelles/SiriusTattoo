@@ -1,12 +1,8 @@
-﻿using WebApplication2;
-using System;
+﻿using System;
 using System.Linq;
 using System.Net.Http;
-using System.Threading.Tasks;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using System.Net.Http.Json;
+using System.Web.UI.WebControls;
 
 namespace WebApplication2
 {

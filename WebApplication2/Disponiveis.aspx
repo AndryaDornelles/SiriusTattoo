@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Tatuagens" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Disponiveis.aspx.cs" Inherits="WebApplication2.WebForm4" %>
+﻿<%@ Page Title="Tatuagens" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Disponiveis.aspx.cs" Inherits="WebApplication2.WebForm4" Async="true" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="container mt-5">
         <h2 class="mb-4">Tatuagens Disponíveis</h2>
