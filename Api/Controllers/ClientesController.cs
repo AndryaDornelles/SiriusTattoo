@@ -33,7 +33,7 @@ namespace Api.Controllers
         }
 
         [HttpPost("login")]
-        public IActionResult Login([FromForm]LoginRequest request)
+        public IActionResult Login([FromBody]LoginRequest request)
         {
             if (request == null || string.IsNullOrEmpty(request.Email) || string.IsNullOrEmpty(request.Password))
             {

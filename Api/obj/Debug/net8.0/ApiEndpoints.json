@@ -192,14 +192,9 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Email",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "Password",
-        "Type": "System.String",
-        "IsRequired": false
+        "Name": "request",
+        "Type": "Api.Models.LoginRequest",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
