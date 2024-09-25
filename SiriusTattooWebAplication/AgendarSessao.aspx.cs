@@ -32,8 +32,7 @@ namespace WebApplication2
                         var tatuagem = ctx.Tatuagens.FirstOrDefault(t => t.Id == tatuagemId);
                         if (tatuagem != null)
                         {
-                            // Opcional: Exibir detalhes da tatuagem se necessário
-                            lblDetalhes.Text = $"Você selecionou a tatuagem: {tatuagem.Nome}";
+
                         }
                     }
                 }

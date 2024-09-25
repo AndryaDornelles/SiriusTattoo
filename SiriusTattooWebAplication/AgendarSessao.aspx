@@ -21,7 +21,7 @@
     </div>
     <asp:Button ID="btnAgendar" runat="server" Text="Agendar" OnClick="btnAgendar_Click" CssClass="btn btn-primary" />
 
-    <asp:Label ID="lblDetalhes" runat="server" CssClass="text-success mt-3"></asp:Label>
+    <asp:Label ID="lblDetalhes" runat="server" CssClass="text-danger mt-3"></asp:Label>
 
 </div>
 <script type="text/javascript">

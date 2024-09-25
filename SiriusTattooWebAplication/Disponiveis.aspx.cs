@@ -52,15 +52,18 @@ namespace WebApplication2
             }
         }
 
+        // Botão para visualizar o painel de cadastro de tatuagem
         protected void btnCadastrarTatuagem_Click(object sender, EventArgs e)
         {
             panelCadastroTatuagem.Visible = true;
         }
+        
         protected void btnCadastrarTatuador_Click(object sender, EventArgs e)
         {
             Response.Redirect("CadastrarTatuadores.aspx");
         }
 
+        // Botão para completar o cadastro da tatuagem
         protected void btnAddTatuagem_Click(object sender, EventArgs e)
         {
             #region | Validações |
@@ -152,7 +155,6 @@ namespace WebApplication2
                     lbResultado.Visible = true;
                 }
             }
-
         }
 
         protected void btnCancelarAddTatuagem_Click(object sender, EventArgs e)
@@ -167,6 +169,7 @@ namespace WebApplication2
             Response.Redirect("Compras.aspx?tatuagemId=" + tatuagemId);
         }
 
+        // DropDownList para selecionar o tatuador e carregar as tatuagens
         protected void ddlTatuador_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(ddlTatuador.SelectedValue))
@@ -193,7 +196,7 @@ namespace WebApplication2
             }
             else
             {
-                // Se nenhum tatuador for selecionado, você pode limpar o GridView
+                // Se nenhum tatuador for selecionado, limpa o GridView
                 GridView1.DataSource = null; // Limpa a fonte de dados
                 GridView1.DataBind(); // Atualiza o GridView
             }
@@ -225,8 +228,9 @@ namespace WebApplication2
         protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             GridView1.PageIndex = e.NewPageIndex; // Define o novo índice de página
-            CarregarTatuagens(); // Método que você deve criar para carregar os dados do GridView novamente
+            CarregarTatuagens(); // Método para carregar os dados do GridView novamente
         }
+        // Lista as tatuagens de acordo com o tatuador selecionado no ddl
         private void CarregarTatuagens()
         {
             long tatuadorId;

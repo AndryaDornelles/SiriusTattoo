@@ -23,7 +23,7 @@ namespace WebApplication2
                     long tatuagemId = Convert.ToInt64(Request.QueryString["tatuagemId"]);
 
 
-                    // Aqui você pode buscar os detalhes da tatuagem
+                    // Buscar os detalhes da tatuagem
                     using (SiriusTattooEntities ctx = new SiriusTattooEntities())
                     {
                         var tatuagem = ctx.Tatuagens.FirstOrDefault(t => t.Id == tatuagemId);
