@@ -1,16 +1,16 @@
 # Documentação do WebForms - Sirius Tattoo
 
 ## Sumário
-1. [Tela: Login](#tela-login)
-2. [Tela: Cadastrar Cliente](#tela-cadastrar-cliente)
-3. [Tela: Home](#tela-home)
-4. [Tela: Tatuagens Disponíveis](#tela-tatuagens-disponíveis)
-5. [Tela: Cadastrar Tatuagens](#tela-cadastrar-tatuagens)
-6. [Tela: Cadastrar Tatuador](#tela-cadastrar-tatuador)
-7. [Tela: Compras](#tela-compras)
-8. [Tela: Agendar Sessão](#tela-agendar-sessão)
-9. [Tela: Agenda](#tela-agenda)
-10. [Tela: Site Master](#tela-site-master)
+1. [Tela: Login](#1-tela-login)
+2. [Tela: Cadastrar Cliente](#2-tela-cadastrar-cliente)
+3. [Tela: Home](#3-tela-home)
+4. [Tela: Tatuagens Disponíveis](#4-tela-tatuagens-disponíveis)
+5. [Tela: Cadastrar Tatuagens](#5-tela-cadastrar-tatuagens)
+6. [Tela: Cadastrar Tatuador](#6-tela-cadastrar-tatuador)
+7. [Tela: Compras](#7-tela-compras)
+8. [Tela: Agendar Sessão](#8-tela-agendar-sessão)
+9. [Tela: Agenda](#9-tela-agenda)
+10. [Tela: Site Master](#10-tela-site-master)
 
 ## Estrutura do Projeto
 
