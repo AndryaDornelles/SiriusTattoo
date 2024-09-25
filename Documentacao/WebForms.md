@@ -63,7 +63,7 @@
 ### 6. Tela: Cadastrar Tatuador
 - **Descrição**: Tela para cadastro de tatuadores.
 - **Funcionalidades**:
-  - Campos para nome, e-mail, especialização e foto do tatuador.
+  - Campos para nome, e-mail, especialidade e senha do tatuador.
   - Botão para salvar as informações do tatuador.
   - Botão para cancelar o preenchimento do cadastro.
 
