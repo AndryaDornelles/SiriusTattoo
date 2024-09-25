@@ -110,7 +110,7 @@ Execute as migrações do banco de dados.
 * **Tests:** Contém os testes unitários escritos com xUnit.
 
 ## Documentação da API
-A documentação completa da API está disponível em [link para a documentação da API]. A documentação inclui:
+A documentação completa da API está disponível em [Documentação da API](https://github.com/AndryaDornelles/SiriusTattoo/blob/main/Documentacao/API.md). A documentação inclui:
 * **Endpoints:** Uma lista de todos os endpoints disponíveis, com exemplos de requisições e respostas.
 * **Modelos de dados:** A estrutura dos dados enviados e recebidos pelos endpoints.
 * **Códigos de status:** Os códigos de status HTTP retornados pelos endpoints.
