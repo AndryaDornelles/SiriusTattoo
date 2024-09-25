@@ -87,7 +87,7 @@ Para instalar o projeto, siga estas etapas:
 Execute as migrações do banco de dados.
 
 ## Utilização
-* **Aplicação WebForms:** Acesse a aplicação através do navegador para realizar as operações do dia a dia do estúdio.
+* **Aplicação WebForms:** Acesse a aplicação através do navegador para realizar as operações do dia a dia do estúdio. A documentação do WebForms está disponível em [Documentacao/WebForms.md](https://github.com/AndryaDornelles/SiriusTattoo/blob/main/Documentacao/WebForms.md)
 * **API:** Utilize ferramentas como Postman ou um cliente HTTP para consumir os endpoints da API. A documentação da API está disponível em [Documentacao/API.md](https://github.com/AndryaDornelles/SiriusTattoo/blob/main/Documentacao/API.md).
 
 ## Funcionalidades
