@@ -4,16 +4,15 @@
 1. [Descrição](#descrição)
 2. [Tecnologias Utilizadas](#tecnologias-utilizadas)
 3. [Instalação](#instalação)
-   - [1. Abra a solução no Visual Studio](#1-abra-a-solução-no-visual-studio)
-   - [2. Restaure os pacotes NuGet necessários](#2-restaure-os-pacotes-nuget-necessários)
-   - [3. Configure a string de conexão](#3-configure-a-string-de-conexão)
-   - [4. Execute as migrações do banco de dados](#4-execute-as-migrações-do-banco-de-dados)
-   - [5. Inicie a aplicação](#5-inicie-a-aplicação)
-   - [6. Verifique se tudo está funcionando](#6-verifique-se-tudo-está-funcionando)
+   - [1. Clonar o Repositório](#1-clonar-o-repositório)
+   - [2. Configurar o Banco de Dados](#2-configurar-o-banco-de-dados)
+   - [3. Restaure os pacotes NuGet necessários](#3-restaure-os-pacotes-nuget-necessários)
+   - [4. Configure a string de conexão](#4-configure-a-string-de-conexão)
+   - [5. Execute as migrações do banco de dados](#5-execute-as-migrações-do-banco-de-dados)
+   - [6. Inicie a aplicação](#6-inicie-a-aplicação)
+   - [7. Verifique se tudo está funcionando](#7-verifique-se-tudo-está-funcionando)
 4. [Utilização](#utilização)
 5. [Funcionalidades](#funcionalidades)
-   - [Aplicação WebForms](#aplicação-webforms)
-   - [API](#api)
 6. [Estrutura do Projeto](#estrutura-do-projeto)
 7. [Documentação da API](#documentação-da-api)
 
@@ -34,39 +33,38 @@ O SiriusTattoo é um sistema web completo para gestão de estúdios de tatuagem,
 
 Para instalar o projeto, siga estas etapas:
 
-### **1. Clonar o Repositório**
+### **1. Clonar o Repositório**  
 - Acesse o repositório do GitHub e clone-o:
   ```bash
   git clone https://github.com/AndryaDornelles/SiriusTattoo.git
   ```
-### **2. Configurar o Banco de Dados**
+### **2. Configurar o [Banco de Dados](https://github.com/AndryaDornelles/SiriusTattoo/blob/main/Documentacao/BancoDeDados.md)**
 - **Criar o Banco de Dados**
   - Execute o script [SQLQuerySiriusTattoo.sql](SiriusTattooWebAplication/App_Data/SQLQuerySiriusTattoo.sql) no SQL Server Management Studio (SSMS) para criar o banco e tabelas.
   
 - **Popular o Banco de Dados**
   - Apenas o 1º Tatuador é necessário popular antes da inicialização, faça diretamente pelo o SSMS, escolhendo os dados de seu agrado.
 
-### 2. Restaure os pacotes NuGet necessários:
+### 3. Restaure os pacotes NuGet necessários:
 
 - No Visual Studio, clique com o botão direito do mouse na solução no Solution Explorer.
 - Selecione **Restore NuGet Packages**. Isso baixará e instalará todas as dependências necessárias para o projeto.
 
-### 3. Configure a string de conexão:
+### 4. Configure a string de conexão:
 
 - Localize o arquivo `appsettings.json` na pasta do projeto da API.
 - Abra o arquivo e encontre a seção `ConnectionStrings`.
 - Atualize a string de conexão para apontar para o seu banco de dados SQL Server. O formato geralmente se parece com isto:
 
   ```json
-  <connectionStrings>
-    <add name="SiriusTattooConnectionString" connectionString="Data Source=localhost;Initial Catalog=SiriusTattoo;Integrated Security=True;TrustServerCertificate=True" providerName="System.Data.SqlClient" />
-    <add name="SiriusTattooEntities" connectionString="metadata=res://*/Model1.csdl|res://*/Model1.ssdl|res://*/Model1.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=localhost;initial catalog=SiriusTattoo;integrated security=True;trustservercertificate=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
-  </connectionStrings>
+  "ConnectionStrings": {
+    "connection": "Server=NOTEBOOK;Database=SiriusTattoo;trusted_connection=true;TrustServerCertificate=True;"
+  },
   ```
 
   Certifique-se de substituir pelos valores apropriados com a sua string de conexão.
 
-### 4. Execute as migrações do banco de dados
+### 5. Execute as migrações do banco de dados
 
 - Abra o **Package Manager Console** no Visual Studio (Tools > NuGet Package Manager > Package Manager Console).
 - Execute o comando para aplicar as migrações:
@@ -76,12 +74,12 @@ Para instalar o projeto, siga estas etapas:
   ```
   Isso criará as tabelas e a estrutura necessária no banco de dados conforme definido nas migrações do Entity Framework.
 
-### 5. Inicie a aplicação
+### 6. Inicie a aplicação
 
 - Para a aplicação WebForms, você pode pressionar `F5` ou clicar em **Start** no Visual Studio.
 - Para a API, você pode definir o projeto da API como o projeto de inicialização e, em seguida, iniciar a depuração.
 
-### 6. Verifique se tudo está funcionando
+### 7. Verifique se tudo está funcionando
 
 - Acesse a aplicação WebForms pelo navegador no endereço `http://localhost:[PORTA]`, onde `[PORTA]` é a porta atribuída ao seu projeto.
 - Teste os endpoints da API usando ferramentas como Postman ou Insomnia para garantir que todas as operações estão funcionando conforme o esperado.
@@ -90,9 +88,10 @@ Execute as migrações do banco de dados.
 
 ## Utilização
 * **Aplicação WebForms:** Acesse a aplicação através do navegador para realizar as operações do dia a dia do estúdio.
-* **API:** Utilize ferramentas como Postman ou um cliente HTTP para consumir os endpoints da API. A documentação da API está disponível em [link para a documentação da API].
+* **API:** Utilize ferramentas como Postman ou um cliente HTTP para consumir os endpoints da API. A documentação da API está disponível em [Documentacao/API.md](https://github.com/AndryaDornelles/SiriusTattoo/blob/main/Documentacao/API.md).
 
 ## Funcionalidades
+
 * **Aplicação WebForms:**
   * Cadastro de clientes
   * Cadastro de tatuadores
@@ -117,7 +116,7 @@ A documentação completa da API está disponível em [link para a documentaçã
 * **Códigos de status:** Os códigos de status HTTP retornados pelos endpoints.
 * **Consultas LINQ:** Exemplos de consultas LINQ utilizadas para obter os dados.
 
-## Documentação dos Testes
+## Documentação dos [Testes](https://github.com/AndryaDornelles/SiriusTattoo/blob/main/Documentacao/Testes.md)
 
 Testes Unitários com xUnit
 Para garantir a qualidade e a confiabilidade do código no projeto SiriusTattoo, foram desenvolvidos testes unitários utilizando o framework xUnit. 
