@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "UaIjsV1uXL5UGOpWfStjVuScICwvICFqJhGCiN21+lE=",
+  "Source": "SiriusTattoo.Api",
+  "BasePath": "_content/SiriusTattoo.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\SiriusTattoo.Api.props" />
+</Project>
