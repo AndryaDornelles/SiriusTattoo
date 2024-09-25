@@ -1,8 +1,6 @@
 ﻿using Api.Models;
 using Api.Repositories;
-using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
-using NuGet.Protocol.Core.Types;
 using LoginRequest = Api.Models.LoginRequest;
 
 

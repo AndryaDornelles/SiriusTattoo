@@ -4,116 +4,6 @@
     "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\SiriusTattooTests\\SiriusTattoo.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\Api\\Api.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\Api\\Api.csproj",
-        "projectName": "Api",
-        "projectPath": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\Api\\Api.csproj",
-        "packagesPath": "C:\\Users\\andry\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\Api\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\andry\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net8.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        }
-      },
-      "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
-          "dependencies": {
-            "Azure.Identity": {
-              "target": "Package",
-              "version": "[1.12.0, )"
-            },
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[8.0.8, )"
-            },
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[8.0.8, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[8.0.8, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[8.0.8, )"
-            },
-            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
-              "target": "Package",
-              "version": "[8.0.5, )"
-            },
-            "Swashbuckle.AspNetCore": {
-              "target": "Package",
-              "version": "[6.7.3, )"
-            },
-            "System.Formats.Asn1": {
-              "target": "Package",
-              "version": "[8.0.1, )"
-            },
-            "System.Net.Http": {
-              "target": "Package",
-              "version": "[4.3.4, )"
-            },
-            "System.Text.Json": {
-              "target": "Package",
-              "version": "[8.0.4, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
-        }
-      }
-    },
     "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\SiriusTattooApi\\SiriusTattoo.Api.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -249,9 +139,6 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\Api\\Api.csproj": {
-                "projectPath": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\Api\\Api.csproj"
-              },
               "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\SiriusTattooApi\\SiriusTattoo.Api.csproj": {
                 "projectPath": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\SiriusTattooApi\\SiriusTattoo.Api.csproj"
               }

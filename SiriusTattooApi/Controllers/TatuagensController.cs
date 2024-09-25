@@ -1,6 +1,5 @@
 ﻿using Api.Models;
 using Api.Repositories;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Controllers

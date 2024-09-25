@@ -1,6 +1,5 @@
 ﻿using Api.Models;
 using Api.Repositories.Contexts;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Api.Repositories

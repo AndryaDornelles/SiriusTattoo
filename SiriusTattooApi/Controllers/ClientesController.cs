@@ -1,9 +1,6 @@
 ﻿using Api.Models;
 using Api.Repositories;
-using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor;
-using NuGet.Protocol.Core.Types;
 using LoginRequest = Api.Models.LoginRequest;
 
 namespace Api.Controllers

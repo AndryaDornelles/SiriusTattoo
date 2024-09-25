@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SiriusTattoo.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2a05fde76acf77d1332ae68831d1b5614ba6f22f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0c0dded1a92daaa23f6c07df519983a0f3fefe14")]
 [assembly: System.Reflection.AssemblyProductAttribute("SiriusTattoo.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SiriusTattoo.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

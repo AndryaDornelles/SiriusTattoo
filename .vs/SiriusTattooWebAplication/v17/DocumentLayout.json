@@ -3,20 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\WebApplication2\\Disponiveis.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WebApplication2\\Disponiveis.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0E25F8F8-8823-4257-8FBF-4D517A8D71F2}|SiriusTattooApi\\SiriusTattoo.Api.csproj|c:\\users\\andry\\source\\repos\\siriustattoo\\webapplication2\\siriustattooapi\\repositories\\agendarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E25F8F8-8823-4257-8FBF-4D517A8D71F2}|SiriusTattooApi\\SiriusTattoo.Api.csproj|solutionrelative:siriustattooapi\\repositories\\agendarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\TestProject2\\TatuagensApiTests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TestProject2\\TatuagensApiTests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0E25F8F8-8823-4257-8FBF-4D517A8D71F2}|SiriusTattooApi\\SiriusTattoo.Api.csproj|c:\\users\\andry\\source\\repos\\siriustattoo\\webapplication2\\siriustattooapi\\controllers\\tatuagenscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E25F8F8-8823-4257-8FBF-4D517A8D71F2}|SiriusTattooApi\\SiriusTattoo.Api.csproj|solutionrelative:siriustattooapi\\controllers\\tatuagenscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\WebApplication2\\Compras.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WebApplication2\\Compras.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0E25F8F8-8823-4257-8FBF-4D517A8D71F2}|SiriusTattooApi\\SiriusTattoo.Api.csproj|c:\\users\\andry\\source\\repos\\siriustattoo\\webapplication2\\siriustattooapi\\controllers\\tatuadorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E25F8F8-8823-4257-8FBF-4D517A8D71F2}|SiriusTattooApi\\SiriusTattoo.Api.csproj|solutionrelative:siriustattooapi\\controllers\\tatuadorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\WebApplication2\\Disponiveis.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WebApplication2\\Disponiveis.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{0E25F8F8-8823-4257-8FBF-4D517A8D71F2}|SiriusTattooApi\\SiriusTattoo.Api.csproj|c:\\users\\andry\\source\\repos\\siriustattoo\\webapplication2\\siriustattooapi\\controllers\\comprascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E25F8F8-8823-4257-8FBF-4D517A8D71F2}|SiriusTattooApi\\SiriusTattoo.Api.csproj|solutionrelative:siriustattooapi\\controllers\\comprascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E25F8F8-8823-4257-8FBF-4D517A8D71F2}|SiriusTattooApi\\SiriusTattoo.Api.csproj|c:\\users\\andry\\source\\repos\\siriustattoo\\webapplication2\\siriustattooapi\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E25F8F8-8823-4257-8FBF-4D517A8D71F2}|SiriusTattooApi\\SiriusTattoo.Api.csproj|solutionrelative:siriustattooapi\\controllers\\clientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0E25F8F8-8823-4257-8FBF-4D517A8D71F2}|SiriusTattooApi\\SiriusTattoo.Api.csproj|c:\\users\\andry\\source\\repos\\siriustattoo\\webapplication2\\siriustattooapi\\controllers\\agendacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0E25F8F8-8823-4257-8FBF-4D517A8D71F2}|SiriusTattooApi\\SiriusTattoo.Api.csproj|solutionrelative:siriustattooapi\\controllers\\agendacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF253FD8-33DA-4CDA-B59F-5074ED36FB93}|SiriusTattooTests\\SiriusTattoo.Tests.csproj|c:\\users\\andry\\source\\repos\\siriustattoo\\webapplication2\\siriustattootests\\tatuagensapitests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF253FD8-33DA-4CDA-B59F-5074ED36FB93}|SiriusTattooTests\\SiriusTattoo.Tests.csproj|solutionrelative:siriustattootests\\tatuagensapitests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF253FD8-33DA-4CDA-B59F-5074ED36FB93}|SiriusTattooTests\\SiriusTattoo.Tests.csproj|c:\\users\\andry\\source\\repos\\siriustattoo\\webapplication2\\siriustattootests\\tatuadoresapitests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF253FD8-33DA-4CDA-B59F-5074ED36FB93}|SiriusTattooTests\\SiriusTattoo.Tests.csproj|solutionrelative:siriustattootests\\tatuadoresapitests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF253FD8-33DA-4CDA-B59F-5074ED36FB93}|SiriusTattooTests\\SiriusTattoo.Tests.csproj|c:\\users\\andry\\source\\repos\\siriustattoo\\webapplication2\\siriustattootests\\comprasapitests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF253FD8-33DA-4CDA-B59F-5074ED36FB93}|SiriusTattooTests\\SiriusTattoo.Tests.csproj|solutionrelative:siriustattootests\\comprasapitests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF253FD8-33DA-4CDA-B59F-5074ED36FB93}|SiriusTattooTests\\SiriusTattoo.Tests.csproj|c:\\users\\andry\\source\\repos\\siriustattoo\\webapplication2\\siriustattootests\\clientesapitests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF253FD8-33DA-4CDA-B59F-5074ED36FB93}|SiriusTattooTests\\SiriusTattoo.Tests.csproj|solutionrelative:siriustattootests\\clientesapitests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF253FD8-33DA-4CDA-B59F-5074ED36FB93}|SiriusTattooTests\\SiriusTattoo.Tests.csproj|c:\\users\\andry\\source\\repos\\siriustattoo\\webapplication2\\siriustattootests\\agendaapitests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF253FD8-33DA-4CDA-B59F-5074ED36FB93}|SiriusTattooTests\\SiriusTattoo.Tests.csproj|solutionrelative:siriustattootests\\agendaapitests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,62 +54,154 @@
       "DocumentGroups": [
         {
           "DockedWidth": 363,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Disponiveis.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\WebApplication2\\Disponiveis.aspx.cs",
-              "RelativeDocumentMoniker": "WebApplication2\\Disponiveis.aspx.cs",
-              "ToolTip": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\WebApplication2\\Disponiveis.aspx.cs",
-              "RelativeToolTip": "WebApplication2\\Disponiveis.aspx.cs",
+              "Title": "AgendaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\SiriusTattooApi\\Repositories\\AgendaRepository.cs",
+              "RelativeDocumentMoniker": "SiriusTattooApi\\Repositories\\AgendaRepository.cs",
+              "ToolTip": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\SiriusTattooApi\\Repositories\\AgendaRepository.cs",
+              "RelativeToolTip": "SiriusTattooApi\\Repositories\\AgendaRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T14:52:08.013Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Disponiveis.aspx",
-              "DocumentMoniker": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\WebApplication2\\Disponiveis.aspx",
-              "RelativeDocumentMoniker": "WebApplication2\\Disponiveis.aspx",
-              "ToolTip": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\WebApplication2\\Disponiveis.aspx",
-              "RelativeToolTip": "WebApplication2\\Disponiveis.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-09-24T14:51:08.106Z"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 577,
-          "SelectedChildIndex": 1,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Compras.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\WebApplication2\\Compras.aspx.cs",
-              "RelativeDocumentMoniker": "WebApplication2\\Compras.aspx.cs",
-              "ToolTip": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\WebApplication2\\Compras.aspx.cs",
-              "RelativeToolTip": "WebApplication2\\Compras.aspx.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T14:54:12.042Z"
+              "WhenOpened": "2024-09-25T02:17:41.11Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TatuagensApiTests.cs",
-              "DocumentMoniker": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\TestProject2\\TatuagensApiTests.cs",
-              "RelativeDocumentMoniker": "TestProject2\\TatuagensApiTests.cs",
-              "ToolTip": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\TestProject2\\TatuagensApiTests.cs",
-              "RelativeToolTip": "TestProject2\\TatuagensApiTests.cs",
+              "Title": "TatuagensController.cs",
+              "DocumentMoniker": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\SiriusTattooApi\\Controllers\\TatuagensController.cs",
+              "RelativeDocumentMoniker": "SiriusTattooApi\\Controllers\\TatuagensController.cs",
+              "ToolTip": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\SiriusTattooApi\\Controllers\\TatuagensController.cs",
+              "RelativeToolTip": "SiriusTattooApi\\Controllers\\TatuagensController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T14:58:12.436Z"
+              "WhenOpened": "2024-09-25T02:17:19.996Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TatuadoresController.cs",
+              "DocumentMoniker": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\SiriusTattooApi\\Controllers\\TatuadoresController.cs",
+              "RelativeDocumentMoniker": "SiriusTattooApi\\Controllers\\TatuadoresController.cs",
+              "ToolTip": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\SiriusTattooApi\\Controllers\\TatuadoresController.cs",
+              "RelativeToolTip": "SiriusTattooApi\\Controllers\\TatuadoresController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T02:17:14.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ComprasController.cs",
+              "DocumentMoniker": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\SiriusTattooApi\\Controllers\\ComprasController.cs",
+              "RelativeDocumentMoniker": "SiriusTattooApi\\Controllers\\ComprasController.cs",
+              "ToolTip": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\SiriusTattooApi\\Controllers\\ComprasController.cs",
+              "RelativeToolTip": "SiriusTattooApi\\Controllers\\ComprasController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T02:17:09.88Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ClientesController.cs",
+              "DocumentMoniker": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\SiriusTattooApi\\Controllers\\ClientesController.cs",
+              "RelativeDocumentMoniker": "SiriusTattooApi\\Controllers\\ClientesController.cs",
+              "ToolTip": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\SiriusTattooApi\\Controllers\\ClientesController.cs",
+              "RelativeToolTip": "SiriusTattooApi\\Controllers\\ClientesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T02:17:05.779Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AgendaController.cs",
+              "DocumentMoniker": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\SiriusTattooApi\\Controllers\\AgendaController.cs",
+              "RelativeDocumentMoniker": "SiriusTattooApi\\Controllers\\AgendaController.cs",
+              "ToolTip": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\SiriusTattooApi\\Controllers\\AgendaController.cs",
+              "RelativeToolTip": "SiriusTattooApi\\Controllers\\AgendaController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T02:16:58.903Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TatuagensApiTests.cs",
+              "DocumentMoniker": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\SiriusTattooTests\\TatuagensApiTests.cs",
+              "RelativeDocumentMoniker": "SiriusTattooTests\\TatuagensApiTests.cs",
+              "ToolTip": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\SiriusTattooTests\\TatuagensApiTests.cs",
+              "RelativeToolTip": "SiriusTattooTests\\TatuagensApiTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T02:08:34.721Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TatuadoresApiTests.cs",
+              "DocumentMoniker": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\SiriusTattooTests\\TatuadoresApiTests.cs",
+              "RelativeDocumentMoniker": "SiriusTattooTests\\TatuadoresApiTests.cs",
+              "ToolTip": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\SiriusTattooTests\\TatuadoresApiTests.cs",
+              "RelativeToolTip": "SiriusTattooTests\\TatuadoresApiTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T02:08:32.447Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ComprasApiTests.cs",
+              "DocumentMoniker": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\SiriusTattooTests\\ComprasApiTests.cs",
+              "RelativeDocumentMoniker": "SiriusTattooTests\\ComprasApiTests.cs",
+              "ToolTip": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\SiriusTattooTests\\ComprasApiTests.cs",
+              "RelativeToolTip": "SiriusTattooTests\\ComprasApiTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T02:08:30.817Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ClientesApiTests.cs",
+              "DocumentMoniker": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\SiriusTattooTests\\ClientesApiTests.cs",
+              "RelativeDocumentMoniker": "SiriusTattooTests\\ClientesApiTests.cs",
+              "ToolTip": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\SiriusTattooTests\\ClientesApiTests.cs",
+              "RelativeToolTip": "SiriusTattooTests\\ClientesApiTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T02:08:27.616Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AgendaApiTests.cs",
+              "DocumentMoniker": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\SiriusTattooTests\\AgendaApiTests.cs",
+              "RelativeDocumentMoniker": "SiriusTattooTests\\AgendaApiTests.cs",
+              "ToolTip": "C:\\Users\\andry\\source\\repos\\SiriusTattoo\\WebApplication2\\SiriusTattooTests\\AgendaApiTests.cs",
+              "RelativeToolTip": "SiriusTattooTests\\AgendaApiTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T02:08:24.279Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
             }
           ]
         }
