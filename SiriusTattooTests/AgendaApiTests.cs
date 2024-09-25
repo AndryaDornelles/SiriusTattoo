@@ -75,6 +75,7 @@ namespace SiriusTattoo.Tests
             Assert.NotNull(responseBody); // Garante que há uma resposta
             Console.WriteLine(responseBody); // Para ver o conteúdo da resposta
         }
+        
 
     }
 

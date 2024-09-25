@@ -5,7 +5,7 @@
         public long Id { get; set; }
         public long ClienteId { get; set; }
         public long TatuadorId { get; set; }
-        public DateTime? DataSessao { get; set; }
+        public DateTimeOffset? DataSessao { get; set; }
         public TimeSpan Duracao { get; set; }
         public string Status { get; set; }
 

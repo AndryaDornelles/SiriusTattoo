@@ -8,9 +8,9 @@
     ".NETCoreApp,Version=v8.0": {
       "SiriusTattoo.Tests/1.0.0": {
         "dependencies": {
-          "Api": "1.0.0",
           "Microsoft.NET.Test.Sdk": "17.11.1",
           "RestSharp": "112.0.0",
+          "SiriusTattoo.Api": "1.0.0",
           "coverlet.collector": "6.0.2",
           "xunit": "2.9.1",
           "xunit.runner.visualstudio": "2.8.2"
@@ -2572,7 +2572,7 @@
         }
       },
       "xunit.runner.visualstudio/2.8.2": {},
-      "Api/1.0.0": {
+      "SiriusTattoo.Api/1.0.0": {
         "dependencies": {
           "Azure.Identity": "1.12.0",
           "Microsoft.EntityFrameworkCore": "8.0.8",
@@ -2584,7 +2584,7 @@
           "System.Text.Json": "8.0.4"
         },
         "runtime": {
-          "Api.dll": {
+          "SiriusTattoo.Api.dll": {
             "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -4131,7 +4131,7 @@
       "path": "xunit.runner.visualstudio/2.8.2",
       "hashPath": "xunit.runner.visualstudio.2.8.2.nupkg.sha512"
     },
-    "Api/1.0.0": {
+    "SiriusTattoo.Api/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
