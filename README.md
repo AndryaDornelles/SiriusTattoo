@@ -114,7 +114,6 @@ A documentação completa da API está disponível em [Documentação da API](ht
 * **Endpoints:** Uma lista de todos os endpoints disponíveis, com exemplos de requisições e respostas.
 * **Modelos de dados:** A estrutura dos dados enviados e recebidos pelos endpoints.
 * **Códigos de status:** Os códigos de status HTTP retornados pelos endpoints.
-* **Consultas LINQ:** Exemplos de consultas LINQ utilizadas para obter os dados.
 
 ## Documentação dos [Testes](https://github.com/AndryaDornelles/SiriusTattoo/blob/main/Documentacao/Testes.md)
 
